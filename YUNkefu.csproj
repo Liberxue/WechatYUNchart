@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{33E7915E-8F4B-47E7-AF38-13F7680E800C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YUNkefu</RootNamespace>
+    <AssemblyName>YUNkefu</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>D:\oscwififood\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebKit.Interop">
+      <HintPath>..\WeChat.013r\WeChat.NET\bin\Debug\WebKit.Interop.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="WebKitBrowser, Version=0.5.0.0, Culture=neutral, PublicKeyToken=b967213f6d29a3be, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WeChat.013r\WeChat.NET\bin\Debug\WebKitBrowser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlertForm.Designer.cs">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WChatBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\WChatBox.Designer.cs">
+      <DependentUpon>WChatBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WChatList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\WFriendsList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\WPersonalInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\WPersonalInfo.Designer.cs">
+      <DependentUpon>WPersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\WxListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\WxListView.Designer.cs">
+      <DependentUpon>WxListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Constant.cs" />
+    <Compile Include="Core\Dal\CheckInDal.cs" />
+    <Compile Include="Core\Dal\DbHelperSQL.cs" />
+    <Compile Include="Core\Dal\WeChatAdvertisementDal.cs" />
+    <Compile Include="Core\Dal\WeChatRobotDal.cs" />
+    <Compile Include="Core\Dal\WelcomeDal.cs" />
+    <Compile Include="Core\Dal\WxOperateLogDal.cs" />
+    <Compile Include="Core\Entity\EnumContainer.cs" />
+    <Compile Include="Core\Entity\PassTicketEntity.cs" />
+    <Compile Include="Core\Entity\WxCheckInRes.cs" />
+    <Compile Include="Core\Entity\WxContact.cs" />
+    <Compile Include="Core\Entity\WxGroup.cs" />
+    <Compile Include="Core\Entity\WXMsg.cs" />
+    <Compile Include="Core\Entity\WXUser.cs" />
+    <Compile Include="Core\LoginCore.cs" />
+    <Compile Include="Core\ReplyStrategy\CharLogicPlus\AutoLogic.cs" />
+    <Compile Include="Core\ReplyStrategy\CharLogicPlus\CharLogicContext.cs" />
+    <Compile Include="Core\ReplyStrategy\CharLogicPlus\CustomLogic.cs" />
+    <Compile Include="Core\ReplyStrategy\CharLogicPlus\AbsCharLogic.cs" />
+    <Compile Include="Core\ReplyStrategy\CharLogicPlus\MenuLogic.cs" />
+    <Compile Include="Core\ReplyStrategy\ChatLogic.cs" />
+    <Compile Include="Core\ReplyStrategy\IReplyLogic.cs" />
+    <Compile Include="Core\ReplyStrategy\QuitGroupLogic.cs" />
+    <Compile Include="Core\ReplyStrategy\RedWalletLogic.cs" />
+    <Compile Include="Core\ReplyStrategy\ReplayContext.cs" />
+    <Compile Include="Core\ReplyStrategy\WelcomeLogic.cs" />
+    <Compile Include="Core\Tools.cs" />
+    <Compile Include="Core\TuLingRobot.cs" />
+    <Compile Include="Core\WxSerializable.cs" />
+    <Compile Include="Core\WxTaskCore.cs" />
+    <Compile Include="wechart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wechart.Designer.cs">
+      <DependentUpon>wechart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Http\HttpService.cs" />
+    <Compile Include="Http\LoginService.cs" />
+    <Compile Include="Http\WXService.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrom.Designer.cs">
+      <DependentUpon>MainFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AlertForm.resx">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WChatBox.resx">
+      <DependentUpon>WChatBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WChatList.resx">
+      <DependentUpon>WChatList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WFriendsList.resx">
+      <DependentUpon>WFriendsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WPersonalInfo.resx">
+      <DependentUpon>WPersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wechart.resx">
+      <DependentUpon>wechart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrom.resx">
+      <DependentUpon>MainFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Libs\webbrowsers\WebKitBrowser.dll.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Libs\Newtonsoft.Json.dll" />
+    <None Include="Resources\msg.wav" />
+    <None Include="Resources\male.png" />
+    <None Include="Resources\045631291[1].gif" />
+    <None Include="Resources\back.png" />
+    <Content Include="Libs\webbrowsers\icudt40.dll" />
+    <Content Include="Libs\webbrowsers\icuin40.dll" />
+    <Content Include="Libs\webbrowsers\icuuc40.dll" />
+    <Content Include="Libs\webbrowsers\JavaScriptCore.dll" />
+    <Content Include="Libs\webbrowsers\libcurl.dll" />
+    <Content Include="Libs\webbrowsers\libeay32.dll" />
+    <Content Include="Libs\webbrowsers\libexslt.dll" />
+    <Content Include="Libs\webbrowsers\libxml2.dll" />
+    <Content Include="Libs\webbrowsers\libxslt.dll" />
+    <Content Include="Libs\webbrowsers\objc.dll" />
+    <Content Include="Libs\webbrowsers\pthreadVC2.dll" />
+    <Content Include="Libs\webbrowsers\ssleay32.dll" />
+    <Content Include="Libs\webbrowsers\WebKit.dll" />
+    <Content Include="Libs\webbrowsers\WebKit.Interop.dll" />
+    <Content Include="Libs\webbrowsers\WebKitBrowser.dll" />
+    <Content Include="Resources\close.gif" />
+    <None Include="Resources\female.png" />
+    <None Include="Resources\holmes2.jpg" />
+    <Content Include="Resources\im.png" />
+    <None Include="Resources\info.png" />
+    <Content Include="Resources\load.gif" />
+    <Content Include="Resources\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="SqlServerDal\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

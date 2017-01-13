@@ -1,0 +1,9 @@
+D:\csharp\1222\YUKefu\SkinForm\bin\Release\shisan13.dll
+D:\csharp\1222\YUKefu\SkinForm\bin\Release\shisan13.pdb
+D:\csharp\1222\YUKefu\SkinForm\obj\Release\shisan13.Controls.Shisan13Form.resources
+D:\csharp\1222\YUKefu\SkinForm\obj\Release\shisan13.SkinForm.resources
+D:\csharp\1222\YUKefu\SkinForm\obj\Release\shisan13.SkinMain.resources
+D:\csharp\1222\YUKefu\SkinForm\obj\Release\shisan13.Properties.Resources.resources
+D:\csharp\1222\YUKefu\SkinForm\obj\Release\shisan13.csproj.GenerateResource.Cache
+D:\csharp\1222\YUKefu\SkinForm\obj\Release\shisan13.dll
+D:\csharp\1222\YUKefu\SkinForm\obj\Release\shisan13.pdb

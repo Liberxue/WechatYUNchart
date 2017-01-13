@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F988DDA-955F-42F2-82EB-D6058FB7FF75}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>shisan13</RootNamespace>
+    <AssemblyName>shisan13</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animations\AnimationDirection.cs" />
+    <Compile Include="Animations\AnimationManager.cs" />
+    <Compile Include="Animations\Animations.cs" />
+    <Compile Include="ColorScheme.cs" />
+    <Compile Include="Controls\Shisan13Checkbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Shisan13ContextMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Shisan13Divider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Shisan13FlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Shisan13Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Shisan13Label.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Shisan13ListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Shisan13ProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Shisan13RadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Shisan13RaisedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Shisan13SingleLineTextField.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Shisan13TabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Shisan13TabSelector.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DrawHelper.cs" />
+    <Compile Include="GraphicsPathHelper.cs" />
+    <Compile Include="ImageDrawRect.cs" />
+    <Compile Include="IMaterialControl.cs" />
+    <Compile Include="MaterialSkinManager.cs" />
+    <Compile Include="RoundStyle.cs" />
+    <Compile Include="SkinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkinForm.Designer.cs">
+      <DependentUpon>SkinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkinMain.Designer.cs">
+      <DependentUpon>SkinMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Win32.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Shisan13Form.resx">
+      <DependentUpon>Shisan13Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinForm.resx">
+      <DependentUpon>SkinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinMain.resx">
+      <DependentUpon>SkinMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_light_bkg_top123.png" />
+    <None Include="Resources\Roboto-Medium.ttf" />
+    <None Include="Resources\Roboto-Regular.ttf" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

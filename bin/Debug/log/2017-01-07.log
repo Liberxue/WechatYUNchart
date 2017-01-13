@@ -1,0 +1,15 @@
+2017-01-07 17:48:58   -----   【警告】1262787126不能在此软件运行,请切换版本或重新扫描登陆
+2017-01-07 17:49:26   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   at MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   at MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   at MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   at YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) in d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:line 401
+   at YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) in d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:line 24
+   at YUNkefu.Core.WxTaskCore.AutoSendMsg() in d:\csharp\YUKefu\Core\WxTaskCore.cs:line 121

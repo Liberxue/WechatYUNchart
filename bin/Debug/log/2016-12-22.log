@@ -1,0 +1,370 @@
+2016-12-22 02:27:12   -----   【警告】1262787126不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 02:27:12   -----   【警告】120353907不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 02:41:12   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 02:45:48   -----   【警告】120353907不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 02:45:49   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 02:47:43   -----   【警告】120353907不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 02:47:44   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 02:50:02   -----   【警告】120353907不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 02:50:03   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 02:53:38   -----   【警告】120353907不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 02:53:39   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 02:54:26   -----   【警告】120353907不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 02:54:27   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 02:55:02   -----   【警告】120353907不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 02:55:03   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 02:55:35   -----   【警告】120353907不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 02:55:36   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 02:58:17   -----   【警告】120353907不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 02:58:18   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 02:58:39   -----   【警告】1262787126不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 02:59:46   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 03:00:53   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 03:05:56   -----   System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 YUNkefu.Core.Entity.WxContact.GetNickName(String userName) 位置 d:\csharp\YUKefu\Core\Entity\WxContact.cs:行号 153
+2016-12-22 03:05:56   -----   System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 YUNkefu.Core.Entity.WxContact.GetNickName(String userName) 位置 d:\csharp\YUKefu\Core\Entity\WxContact.cs:行号 153
+2016-12-22 03:05:56   -----   System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 YUNkefu.Core.Entity.WxContact.GetNickName(String userName) 位置 d:\csharp\YUKefu\Core\Entity\WxContact.cs:行号 153
+2016-12-22 03:05:56   -----   System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 YUNkefu.Core.Entity.WxContact.GetNickName(String userName) 位置 d:\csharp\YUKefu\Core\Entity\WxContact.cs:行号 153
+2016-12-22 03:06:45   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 03:07:12   -----   System.InvalidOperationException: DragDrop 注册失败。 ---> System.Threading.ThreadStateException: 在可以调用 OLE 之前，必须将当前线程设置为单线程单元(STA)模式。请确保您的 Main 函数带有 STAThreadAttribute 标记。
+   在 System.Windows.Forms.Control.SetAcceptDrops(Boolean accept)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Forms.Control.SetAcceptDrops(Boolean accept)
+   在 System.Windows.Forms.Control.OnHandleCreated(EventArgs e)
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.Label.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   在 System.Windows.Forms.UnsafeNativeMethods.IntCreateWindowEx(Int32 dwExStyle, String lpszClassName, String lpszWindowName, Int32 style, Int32 x, Int32 y, Int32 width, Int32 height, HandleRef hWndParent, HandleRef hMenu, HandleRef hInst, Object pvParam)
+   在 System.Windows.Forms.UnsafeNativeMethods.CreateWindowEx(Int32 dwExStyle, String lpszClassName, String lpszWindowName, Int32 style, Int32 x, Int32 y, Int32 width, Int32 height, HandleRef hWndParent, HandleRef hMenu, HandleRef hInst, Object pvParam)
+   在 System.Windows.Forms.NativeWindow.CreateHandle(CreateParams cp)
+   在 System.Windows.Forms.Control.CreateHandle()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ContainerControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   在 System.Windows.Forms.SafeNativeMethods.ShowWindow(HandleRef hWnd, Int32 nCmdShow)
+   在 System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   在 System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   在 System.Windows.Forms.Control.Show()
+   在 WeiChartGroup.AlertForm.Show(String content, String title, ShowWay showWay, Int32 width, Int32 height, Int32 showInTime, Int32 showTime, Int32 showOutTime) 位置 d:\csharp\YUKefu\AlertForm.cs:行号 137
+   在 WeiChartGroup.AlertForm.Show(Object[] paramsList) 位置 d:\csharp\YUKefu\AlertForm.cs:行号 80
+   在 YUNkefu.MainFrom.wt_OnRevice(WXMsg msg) 位置 d:\csharp\YUKefu\MainFrom.cs:行号 239
+2016-12-22 03:08:45   -----   【警告】2326086234不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:09:59   -----   【警告】2326086234不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:10:35   -----   【警告】2326086234不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:11:50   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 03:11:57   -----   【警告】2326086234不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:13:57   -----   【警告】2326086234不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:14:18   -----   【警告】2326086234不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:15:37   -----   【警告】2326086234不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:16:23   -----   【警告】2326086234不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:16:57   -----   【警告】2326086234不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:17:14   -----   【警告】2326086234不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:18:06   -----   【警告】2326086234不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:18:51   -----   【警告】2326086234不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:20:16   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 03:22:40   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 03:22:55   -----   【警告】2326086234不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:23:49   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 03:24:19   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 03:25:12   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
+2016-12-22 03:25:46   -----   System.InvalidOperationException: DragDrop 注册失败。 ---> System.Threading.ThreadStateException: 在可以调用 OLE 之前，必须将当前线程设置为单线程单元(STA)模式。请确保您的 Main 函数带有 STAThreadAttribute 标记。
+   在 System.Windows.Forms.Control.SetAcceptDrops(Boolean accept)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Windows.Forms.Control.SetAcceptDrops(Boolean accept)
+   在 System.Windows.Forms.Control.OnHandleCreated(EventArgs e)
+   在 System.Windows.Forms.Control.WmCreate(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.Label.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   在 System.Windows.Forms.UnsafeNativeMethods.IntCreateWindowEx(Int32 dwExStyle, String lpszClassName, String lpszWindowName, Int32 style, Int32 x, Int32 y, Int32 width, Int32 height, HandleRef hWndParent, HandleRef hMenu, HandleRef hInst, Object pvParam)
+   在 System.Windows.Forms.UnsafeNativeMethods.CreateWindowEx(Int32 dwExStyle, String lpszClassName, String lpszWindowName, Int32 style, Int32 x, Int32 y, Int32 width, Int32 height, HandleRef hWndParent, HandleRef hMenu, HandleRef hInst, Object pvParam)
+   在 System.Windows.Forms.NativeWindow.CreateHandle(CreateParams cp)
+   在 System.Windows.Forms.Control.CreateHandle()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ContainerControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   在 System.Windows.Forms.SafeNativeMethods.ShowWindow(HandleRef hWnd, Int32 nCmdShow)
+   在 System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   在 System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   在 System.Windows.Forms.Control.Show()
+   在 WeiChartGroup.AlertForm.Show(String content, String title, ShowWay showWay, Int32 width, Int32 height, Int32 showInTime, Int32 showTime, Int32 showOutTime) 位置 d:\csharp\YUKefu\AlertForm.cs:行号 137
+   在 WeiChartGroup.AlertForm.Show(Object[] paramsList) 位置 d:\csharp\YUKefu\AlertForm.cs:行号 80
+   在 YUNkefu.MainFrom.wt_OnRevice(WXMsg msg) 位置 d:\csharp\YUKefu\MainFrom.cs:行号 239
+2016-12-22 03:26:29   -----   【警告】2326086234不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:27:12   -----   【警告】2376758142不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:27:39   -----   【警告】2376758142不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:34:38   -----   【警告】1262787126不能在此软件运行,请切换版本或重新扫描登陆
+2016-12-22 03:35:05   -----   MySql.Data.MySqlClient.MySqlException (0x80004005): FUNCTION 013.getdate does not exist
+   在 MySql.Data.MySqlClient.MySqlStream.OpenPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   在 YUNkefu.Core.Dal.DbHelperSQL.Query(String SQLString) 位置 d:\csharp\YUKefu\Core\Dal\DbHelperSQL.cs:行号 401
+   在 YUNkefu.Core.Dal.WeChatAdvertisementDal.QueryTask(String robotid) 位置 d:\csharp\YUKefu\Core\Dal\WeChatAdvertisementDal.cs:行号 24
+   在 YUNkefu.Core.WxTaskCore.AutoSendMsg() 位置 d:\csharp\YUKefu\Core\WxTaskCore.cs:行号 121
