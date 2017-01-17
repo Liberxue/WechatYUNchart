@@ -184,18 +184,18 @@
             this.Del_wechart,
             this.rem_wechart});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(125, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(145, 56);
             // 
             // Del_wechart
             // 
             this.Del_wechart.Name = "Del_wechart";
-            this.Del_wechart.Size = new System.Drawing.Size(124, 22);
+            this.Del_wechart.Size = new System.Drawing.Size(144, 26);
             this.Del_wechart.Text = "删除下线";
             // 
             // rem_wechart
             // 
             this.rem_wechart.Name = "rem_wechart";
-            this.rem_wechart.Size = new System.Drawing.Size(124, 22);
+            this.rem_wechart.Size = new System.Drawing.Size(144, 26);
             this.rem_wechart.Text = "转接微信";
             // 
             // label12
@@ -249,7 +249,7 @@
             this.WechartListView.BackColor = System.Drawing.Color.White;
             this.WechartListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.WechartListView.Depth = 0;
-            this.WechartListView.Font = new System.Drawing.Font("Roboto", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.WechartListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.WechartListView.FullRowSelect = true;
             this.WechartListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.WechartListView.LabelWrap = false;
@@ -301,20 +301,20 @@
             // WXtab
             // 
             this.WXtab.Controls.Add(this.WXMaintab);
-            this.WXtab.Location = new System.Drawing.Point(4, 22);
+            this.WXtab.Location = new System.Drawing.Point(4, 25);
             this.WXtab.Name = "WXtab";
             this.WXtab.Padding = new System.Windows.Forms.Padding(3);
-            this.WXtab.Size = new System.Drawing.Size(1084, 722);
+            this.WXtab.Size = new System.Drawing.Size(1084, 719);
             this.WXtab.TabIndex = 0;
             this.WXtab.Text = "微信云客服";
             this.WXtab.UseVisualStyleBackColor = true;
             // 
             // Systab
             // 
-            this.Systab.Location = new System.Drawing.Point(4, 22);
+            this.Systab.Location = new System.Drawing.Point(4, 25);
             this.Systab.Name = "Systab";
             this.Systab.Padding = new System.Windows.Forms.Padding(3);
-            this.Systab.Size = new System.Drawing.Size(1084, 722);
+            this.Systab.Size = new System.Drawing.Size(1084, 719);
             this.Systab.TabIndex = 1;
             this.Systab.Text = "管理中心";
             this.Systab.UseVisualStyleBackColor = true;
@@ -322,9 +322,9 @@
             // wxqys
             // 
             this.wxqys.Controls.Add(this.groupBox1);
-            this.wxqys.Location = new System.Drawing.Point(4, 22);
+            this.wxqys.Location = new System.Drawing.Point(4, 25);
             this.wxqys.Name = "wxqys";
-            this.wxqys.Size = new System.Drawing.Size(1084, 722);
+            this.wxqys.Size = new System.Drawing.Size(1084, 719);
             this.wxqys.TabIndex = 2;
             this.wxqys.Text = "微群管理";
             this.wxqys.UseVisualStyleBackColor = true;
@@ -340,10 +340,10 @@
             // 
             // wxchart
             // 
-            this.wxchart.Location = new System.Drawing.Point(4, 22);
+            this.wxchart.Location = new System.Drawing.Point(4, 25);
             this.wxchart.Name = "wxchart";
             this.wxchart.Padding = new System.Windows.Forms.Padding(3);
-            this.wxchart.Size = new System.Drawing.Size(1084, 722);
+            this.wxchart.Size = new System.Drawing.Size(1084, 719);
             this.wxchart.TabIndex = 3;
             this.wxchart.Text = "报表中心";
             this.wxchart.UseVisualStyleBackColor = true;
@@ -353,10 +353,10 @@
             this.Taskcenter.Controls.Add(this.BtImportreport);
             this.Taskcenter.Controls.Add(this.shisan13Label1);
             this.Taskcenter.Controls.Add(this.groupBox2);
-            this.Taskcenter.Location = new System.Drawing.Point(4, 22);
+            this.Taskcenter.Location = new System.Drawing.Point(4, 25);
             this.Taskcenter.Name = "Taskcenter";
             this.Taskcenter.Padding = new System.Windows.Forms.Padding(3);
-            this.Taskcenter.Size = new System.Drawing.Size(1084, 722);
+            this.Taskcenter.Size = new System.Drawing.Size(1084, 719);
             this.Taskcenter.TabIndex = 4;
             this.Taskcenter.Text = "任务中心";
             this.Taskcenter.UseVisualStyleBackColor = true;
@@ -375,12 +375,12 @@
             // 
             this.shisan13Label1.AutoSize = true;
             this.shisan13Label1.Depth = 0;
-            this.shisan13Label1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.shisan13Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.shisan13Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.shisan13Label1.Location = new System.Drawing.Point(202, 38);
             this.shisan13Label1.MouseState = YUNkefu.MouseState.HOVER;
             this.shisan13Label1.Name = "shisan13Label1";
-            this.shisan13Label1.Size = new System.Drawing.Size(72, 18);
+            this.shisan13Label1.Size = new System.Drawing.Size(86, 24);
             this.shisan13Label1.TabIndex = 1;
             this.shisan13Label1.Text = "快捷回复";
             // 
@@ -415,7 +415,7 @@
             this.labOnLineCount.ForeColor = System.Drawing.Color.White;
             this.labOnLineCount.Location = new System.Drawing.Point(116, 5);
             this.labOnLineCount.Name = "labOnLineCount";
-            this.labOnLineCount.Size = new System.Drawing.Size(17, 20);
+            this.labOnLineCount.Size = new System.Drawing.Size(21, 24);
             this.labOnLineCount.TabIndex = 0;
             this.labOnLineCount.Text = "0";
             // 
@@ -427,7 +427,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(7, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 20);
+            this.label1.Size = new System.Drawing.Size(136, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "当前微信在线：";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -442,7 +442,6 @@
             this.rtLog.Size = new System.Drawing.Size(874, 23);
             this.rtLog.TabIndex = 0;
             this.rtLog.Text = "";
-            this.rtLog.Visible = false;
             // 
             // cbShowWay
             // 
@@ -453,7 +452,7 @@
             "淡出淡入"});
             this.cbShowWay.Location = new System.Drawing.Point(1258, 3);
             this.cbShowWay.Name = "cbShowWay";
-            this.cbShowWay.Size = new System.Drawing.Size(38, 20);
+            this.cbShowWay.Size = new System.Drawing.Size(38, 23);
             this.cbShowWay.TabIndex = 32;
             this.cbShowWay.Visible = false;
             this.cbShowWay.SelectedIndexChanged += new System.EventHandler(this.cbShowWay_SelectedIndexChanged);
@@ -515,7 +514,7 @@
             this.WXMaintab.Padding = new System.Drawing.Point(9, 4);
             this.WXMaintab.SelectedIndex = 0;
             this.WXMaintab.ShowDrawTipText = true;
-            this.WXMaintab.Size = new System.Drawing.Size(1078, 716);
+            this.WXMaintab.Size = new System.Drawing.Size(1078, 713);
             this.WXMaintab.TabIndex = 0;
             this.WXMaintab.TipBackColor = System.Drawing.Color.Moccasin;
             this.WXMaintab.TipTextColor = System.Drawing.Color.Black;
@@ -529,10 +528,10 @@
             this.tabPage1.Controls.Add(this.chart3);
             this.tabPage1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tabPage1.Location = new System.Drawing.Point(4, 28);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1070, 684);
+            this.tabPage1.Size = new System.Drawing.Size(1070, 677);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = " 主 界 面";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -621,18 +620,18 @@
             // 
             this.wxListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wxListView1.FullRowSelect = true;
-            this.wxListView1.Location = new System.Drawing.Point(3, 17);
+            this.wxListView1.Location = new System.Drawing.Point(3, 21);
             this.wxListView1.Name = "wxListView1";
             this.wxListView1.NeedDrawItemIndex = 0;
             this.wxListView1.OwnerDraw = true;
-            this.wxListView1.Size = new System.Drawing.Size(409, 312);
+            this.wxListView1.Size = new System.Drawing.Size(409, 308);
             this.wxListView1.TabIndex = 0;
             this.wxListView1.UseCompatibleStateImageBehavior = false;
             this.wxListView1.View = System.Windows.Forms.View.Details;
             // 
             // Wx_MainFrom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

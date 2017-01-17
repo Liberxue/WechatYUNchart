@@ -13,7 +13,7 @@ namespace YUNkefu.Core.Dal
     public abstract class DbHelperSQL
     {
         //数据库连接字符串(web.config来配置)，多数据库可使用DbHelperSQLP来实现.
-        public static string MySqlConnection = "server=192.168.1.7;database=013;uid=root;pwd=root;Connect Timeout=1200";
+        public static string MySqlConnection = "server=139.224.25.155;database=yukefu;uid=shisan13;pwd=shisan13@;Connect Timeout=1200";
         #region 公用方法
         /// <summary>
         /// 判断是否存在某表的某个字段
