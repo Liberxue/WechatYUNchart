@@ -26,7 +26,7 @@ namespace YUNkefu.Controls
             Rectangle tRect = new Rectangle();
             Point tPoint = new Point();
 
-            Font tFont = new Font("宋体", 9, FontStyle.Regular);
+            Font tFont = new Font("宋体", 12, FontStyle.Regular);
             SolidBrush tBackBrush = new SolidBrush(System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56))))));
             SolidBrush tFtontBrush;
 

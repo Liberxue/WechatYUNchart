@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
+﻿using System.Collections.Generic;
 using System.Net;
 using YUNkefu.Core.Entity;
-using YUNkefu.Core;
 using YUNkefu.Http;
 
 namespace YUNkefu.Core
@@ -34,8 +30,29 @@ namespace YUNkefu.Core
             else
             {
                 WxSerializable s = new WxSerializable(uin, EnumContainer.SerializType.pass_ticket);
-                _passticket_dic.Add(uin, (PassTicketEntity)s.DeSerializable());
-                return (PassTicketEntity)s.DeSerializable();
+                //if (_passticket_dic.ContainsKey(uin))
+                //    _passticket_dic.Remove(uin);
+                ////先判断下键值是否存在要不卡死头像只能显示一个用户的
+                //if (uin=="0")
+                //{
+                //    return null;
+                //}
+                //if (!_passticket_dic.ContainsKey("1"))
+                //{
+                //    _passticket_dic.Add(uin, (PassTicketEntity)s.DeSerializable());
+                //}
+                //return (PassTicketEntity)s.DeSerializable();
+                try
+                {
+                    if (_passticket_dic.ContainsKey(uin))
+                        _passticket_dic.Remove(uin);
+                    _passticket_dic.Remove(uin);
+                    return (PassTicketEntity)s.DeSerializable();
+                }
+                catch
+                {
+                    return null;
+                }
             }
         }
         public static int GetPassTicketCount()

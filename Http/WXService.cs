@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using System.Text;
 using YUNkefu.Core;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
-using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
-using YUNkefu.Core.Entity;
 
 namespace YUNkefu.Http
 {
@@ -19,6 +16,7 @@ namespace YUNkefu.Http
     {
         public string Uin { get; set; }
         public string Sid { get; set; }
+        public string robotID { get; set; }
 
         /// <summary>
         /// 微信初始化
@@ -30,12 +28,13 @@ namespace YUNkefu.Http
 
             if (Uin != null && Sid != null)
             {
-                string pass_ticket = LoginCore.GetPassTicket(Uin).PassTicket;
-                string skey=LoginCore.GetPassTicket(Uin).SKey;
+                string pass_ticket = LoginCore.GetPassTicket(Uin).PassTicket;//这个位置过来了
+                string skey = LoginCore.GetPassTicket(Uin).SKey;
                 init_json = string.Format(init_json, Uin, Sid, skey);
-                byte[] bytes = HttpService.SendPostRequest(Constant._init_url + "&pass_ticket=" + pass_ticket, init_json,Uin);
-                string init_str = Encoding.UTF8.GetString(bytes);                
-                JObject init_result = JsonConvert.DeserializeObject(init_str) as JObject;                               
+                byte[] bytes = HttpService.SendPostRequest(Constant._init_url + "&pass_ticket=" + pass_ticket, init_json, Uin);
+                //byte[] bytes = HttpService.SendPostRequest( WXUser_url+ "&pass_ticket=" + pass_ticket, init_json, Uin);
+                string init_str = Encoding.UTF8.GetString(bytes);
+                JObject init_result = JsonConvert.DeserializeObject(init_str) as JObject;
                 return init_result;
             }
             else
@@ -46,27 +45,42 @@ namespace YUNkefu.Http
 
         public Image GetHeadImg(string usename)
         {
-            byte[] bytes = HttpService.SendGetRequest(Constant._getheadimg_url + usename,"");
-
-            if (bytes.Length == 0)
+            //if (bytes.Length == 0)
+            //{
+            //    return null;
+            //}
+            //return Image.FromStream(new MemoryStream(bytes));
+            try
+            {
+                byte[] bytes = HttpService.SendGetRequest(Constant._getheadimg_url + usename, "");
+                return Image.FromStream(new MemoryStream(bytes));
+            }
+            catch (Exception)
             {
                 return null;
             }
-            return Image.FromStream(new MemoryStream(bytes));
         }
         /// <summary>
         /// 获取头像
         /// </summary>
         /// <param name="username"></param>
         /// <returns></returns>
-        public Image GetIcon(string username,string uin="")
-        {                        
-            byte[] bytes = HttpService.SendGetRequest(Constant._geticon_url + username, uin);
-            if (bytes.Length==0)
+        public Image GetIcon(string username, string uin = "")
+        {
+            try
+            {
+                byte[] bytes = HttpService.SendGetRequest(Constant._geticon_url + username, uin);
+                //if (bytes.Length == 0)
+                //{
+                //    return null;
+                //}
+                return Image.FromStream(new MemoryStream(bytes));
+            }
+
+            catch(Exception)
             {
                 return null;
             }
-            return Image.FromStream(new MemoryStream(bytes));
         }
 
         /// <summary>
@@ -105,7 +119,7 @@ namespace YUNkefu.Http
                     return null;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return "";
             }
@@ -114,31 +128,31 @@ namespace YUNkefu.Http
         /// <summary>
         /// 微信同步
         /// </summary>
-        /// <returns></returns>
+        /// <returns></returns> 
         public JObject WxSync()
         {
             var entity = LoginCore.GetPassTicket(Uin);
             string sync_json = "{{\"BaseRequest\" : {{\"DeviceID\":\"e1615250492\",\"Sid\":\"{1}\", \"Skey\":\"{5}\", \"Uin\":\"{0}\"}},\"SyncKey\" : {{\"Count\":{2},\"List\": [{3}]}},\"rr\" :{4}}}";
-            
             string sync_keys = "";
-
             var _syncKey = LoginCore.GetSyncKey(Uin);
-
             foreach (KeyValuePair<string, string> p in _syncKey)
             {
                 sync_keys += "{\"Key\":" + p.Key + ",\"Val\":" + p.Value + "},";
             }
             sync_keys = sync_keys.TrimEnd(',');
             sync_json = string.Format(sync_json, this.Uin, this.Sid, _syncKey.Count, sync_keys, (long)(DateTime.Now.ToUniversalTime() - new System.DateTime(1970, 1, 1)).TotalMilliseconds, entity.SKey);
-            
+
             if (this.Sid != null && this.Uin != null)
             {
                 byte[] bytes = HttpService.SendPostRequest(Constant._sync_url + this.Sid + "&lang=zh_CN&skey=" + entity.SKey + "&pass_ticket=" + entity.PassTicket, sync_json, this.Uin);
                 string sync_str = Encoding.UTF8.GetString(bytes);
-
+                if (sync_str == null)
+                {
+                    return null;
+                }
                 JObject sync_resul = JsonConvert.DeserializeObject(sync_str) as JObject;
-
-                if (sync_resul["SyncKey"]["Count"].ToString() != "0")
+                // Dictionary<string, string> ss = new Dictionary<string, string>();
+                if (sync_resul["SyncKey"]["Count"].ToString() != "1")
                 {
                     _syncKey.Clear();
                     foreach (JObject key in sync_resul["SyncKey"]["List"])
@@ -161,7 +175,7 @@ namespace YUNkefu.Http
         /// <param name="from"></param>
         /// <param name="to"></param>
         /// <param name="type"></param>
-        public void SendMsg(string msg, string from, string to, int type)
+        public void SendMsg(string msg, string from, string to, int type, string Uin, string Sid)
         {
             string msg_json = "{{" +
             "\"BaseRequest\":{{" +
@@ -180,17 +194,18 @@ namespace YUNkefu.Http
             "}}," +
             "\"rr\" : {7}" +
             "}}";
-           
             var entity = LoginCore.GetPassTicket(Uin);
-
             if (Sid != null && Uin != null)
             {
                 msg_json = string.Format(msg_json, Sid, Uin, msg, from, to, type, entity.SKey, DateTime.Now.Millisecond, DateTime.Now.Millisecond, DateTime.Now.Millisecond);
-
-                byte[] bytes = HttpService.SendPostRequest(Constant._sendmsg_url + Sid + "&lang=zh_CN&pass_ticket=" + entity.PassTicket, msg_json,Uin);
-
+                byte[] bytes = HttpService.SendPostRequest(Constant._sendmsg_url + Sid + "&lang=zh_CN&pass_ticket=" + entity.PassTicket, msg_json, Uin);
                 string send_result = Encoding.UTF8.GetString(bytes);
             }
+            //((Action)delegate()
+            //{
+            //    //存储发送消息
+            //    var b = WxOperateLogDal.AddWxsendmsglog(Uin, from, msg,to,from);
+            //}).BeginInvoke(null, null);
         }
 
         /// <summary>
@@ -199,8 +214,8 @@ namespace YUNkefu.Http
         /// <returns></returns>
         public JObject GetContact()
         {
-            byte[] bytes = HttpService.SendGetRequest(Constant._getcontact_url,Uin);
-            string contact_str = Encoding.UTF8.GetString(bytes);            
+            byte[] bytes = HttpService.SendGetRequest(Constant._getcontact_url, Uin);
+            string contact_str = Encoding.UTF8.GetString(bytes);
             return JsonConvert.DeserializeObject(contact_str) as JObject;
         }
 
@@ -213,15 +228,15 @@ namespace YUNkefu.Http
                 _jstr += string.Format("{{{{\"UserName\":\"{0}\",\"ChatRoomId\":\"\"}}}},",
                     username, "");
             }
-            string json="{{"+
-                "\"BaseRequest\":{{\"Uin\":{0},"+
-                "\"Sid\":\"{1}\","+
-                "\"Skey\":\"{2}\","+
-                "\"DeviceID\":\"e017670883684764\"}},"+
-                "\"Count\":{3},"+
-                "\"List\":["+
-                    _jstr.TrimEnd(',')+
-                    "]"+
+            string json = "{{" +
+                "\"BaseRequest\":{{\"Uin\":{0}," +
+                "\"Sid\":\"{1}\"," +
+                "\"Skey\":\"{2}\"," +
+                "\"DeviceID\":\"e017670883684764\"}}," +
+                "\"Count\":{3}," +
+                "\"List\":[" +
+                    _jstr.TrimEnd(',') +
+                    "]" +
                 "}}";
             try
             {
@@ -229,6 +244,8 @@ namespace YUNkefu.Http
             }
             catch (Exception ex)
             {
+                //写日志
+                Tools.WriteLog(ex.ToString());
             }
 
             string url = string.Format(Constant._getbatcontact_url, HttpService.GetTimeStamp(), entity.PassTicket);
@@ -236,6 +253,6 @@ namespace YUNkefu.Http
             string contact_str = Encoding.UTF8.GetString(bytes);
 
             return JsonConvert.DeserializeObject(contact_str) as JObject;
-        }    
+        }
     }
 }

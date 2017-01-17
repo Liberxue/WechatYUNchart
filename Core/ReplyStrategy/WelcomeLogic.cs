@@ -63,19 +63,19 @@ namespace YUNkefu.Core.ReplyStrategy
 
             switch (welcomeSwitch)
             {
-                case (int)YUNkefu.Core.Entity.EnumContainer.CommonSwichEnum.关闭不发送:                    
+                case (int)EnumContainer.CommonSwichEnum.关闭不发送:                    
                     break;
-                case (int)YUNkefu.Core.Entity.EnumContainer.CommonSwichEnum.自定义语句:
+                case (int)EnumContainer.CommonSwichEnum.自定义语句:
                     ret = GetCustomWelcome(robot.Rows[0]["RobotId"].ToString());
                     break;
-                case (int)YUNkefu.Core.Entity.EnumContainer.CommonSwichEnum.通用语句:
+                case (int)EnumContainer.CommonSwichEnum.通用语句:
                     ret = "请遵守群规[微笑]";
                     break;
             }
 
             ((Action)delegate()
             {
-                //写进群日志
+                //写进群数据库
                 var b = WxOperateLogDal.AddInGroupLog(msg.Uin, groupUserName, msg.Msg);
             }).BeginInvoke(null, null);
 

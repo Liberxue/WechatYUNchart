@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-
-using System.Text;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -19,10 +16,10 @@ namespace YUNkefu.Core
             try
             {
                 this._uin = uin;
-                var dir = System.Environment.CurrentDirectory + "\\data\\" + this._uin;
-                if (!System.IO.Directory.Exists(dir))
+                var dir = Environment.CurrentDirectory + "\\data\\" + this._uin;
+                if (!Directory.Exists(dir))
                 {
-                    System.IO.Directory.CreateDirectory(dir);
+                    Directory.CreateDirectory(dir);
                 }
                 fileName = dir+"\\" + type.ToString() + ".dat";//文件名称与路径
                 if (!File.Exists(fileName))
@@ -35,7 +32,8 @@ namespace YUNkefu.Core
             }
             catch (Exception ex)
             {
-               string aa;
+                //写日志
+                Tools.WriteLog(ex.ToString());
             }
         }
 
@@ -52,7 +50,8 @@ namespace YUNkefu.Core
             }
             catch (Exception ex)
             {
-                string aa;
+                //写日志
+                Tools.WriteLog(ex.ToString());
             }
         }
 
@@ -73,8 +72,9 @@ namespace YUNkefu.Core
                         return null;
                 }
             }
-            catch (Exception ex)
+            catch (Exception exobj)
             {
+                Tools.WriteLog(exobj.ToString());
                 return null;
             }
         }

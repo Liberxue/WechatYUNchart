@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-
-using System.Text;
 using Newtonsoft.Json.Linq;
 using YUNkefu.Http;
 using YUNkefu.Core.Entity;
@@ -63,8 +61,8 @@ namespace YUNkefu.Core
                                     string content = m["Content"].ToString();
                                     string type = m["MsgType"].ToString();
                                     var msg = new WXMsg();
-                                    msg.Sid = this.Sid;
-                                    msg.Uin = this.Uin;
+                                    msg.Sid = Sid;
+                                    msg.Uin = Uin;
                                     msg.From = from;
                                     msg.Msg = content; //只接受文本消息
                                     msg.Readed = false;
@@ -81,8 +79,7 @@ namespace YUNkefu.Core
                                     }
                                     if (msg.From != user.UserName)  //接收别人消息
                                     {
-                                        if (OnRevice != null)
-                                            OnRevice(msg);
+                                        OnRevice.Invoke(msg);
                                     }                                    
                                 }
                             }
@@ -90,20 +87,18 @@ namespace YUNkefu.Core
                             //判断是否有修改联系人信息
                             if (sync_result["ModContactCount"] != null && sync_result["ModContactCount"].ToString() != "0")
                             {
-                                if (OnModifyContact != null)
-                                    OnModifyContact(null, Sid, Uin);
+                                OnModifyContact.Invoke(null, Sid, Uin);
                             }
                         }
                     }
-                    System.Threading.Thread.Sleep(2000);
+                    System.Threading.Thread.Sleep(5000);
                 }
             }
             catch (Exception ex)
             {
                 var msg = new WXMsg();
                 msg.Msg = ex.ToString();
-                if (OnRevice != null)
-                    OnRevice(msg);
+                OnRevice.Invoke(msg);
 
                 Tools.WriteLog(ex.ToString());
             }
@@ -131,11 +126,11 @@ namespace YUNkefu.Core
                         {
                             last = Convert.ToDateTime(lastSendTime_str);
                         }
-                        if (int.Parse(dr["AdverCategory"].ToString()) == (int)YUNkefu.Core.Entity.EnumContainer.AdverCategoryEnum.公告语)
+                        if (int.Parse(dr["AdverCategory"].ToString()) == (int)EnumContainer.AdverCategoryEnum.公告语)
                         {
                             switch (int.Parse(dr["SendMode"].ToString()))
                             {
-                                case (int)YUNkefu.Core.Entity.EnumContainer.SendModeEnum.每隔多少分钟:
+                                case (int)EnumContainer.SendModeEnum.每隔多少分钟:
                                     if (DateTime.Now.Subtract(last).TotalMinutes > int.Parse(dr["SendModeParas"].ToString()))
                                     {
                                         msgText = dr["AdverContent"].ToString();
@@ -143,7 +138,7 @@ namespace YUNkefu.Core
                                             _taskDic.Add(adverId, msgText);
                                     }
                                     break;
-                                case (int)YUNkefu.Core.Entity.EnumContainer.SendModeEnum.每天某一时刻:
+                                case (int)EnumContainer.SendModeEnum.每天某一时刻:
                                     var tempTime = Convert.ToDateTime(string.Format("{0} {1}", DateTime.Now.ToString("yyyy-MM-dd"), dr["SendModeParas"]));
                                     var s_i = tempTime.Subtract(DateTime.Now).TotalSeconds;
                                     if (s_i <= 0 && s_i > -10)
@@ -156,7 +151,7 @@ namespace YUNkefu.Core
                                         }
                                     }
                                     break;
-                                case (int)YUNkefu.Core.Entity.EnumContainer.SendModeEnum.指定具体时间:
+                                case (int)EnumContainer.SendModeEnum.指定具体时间:
                                     var temp = Convert.ToDateTime(dr["SendModeParas"]);
                                     var s_i_i = temp.Subtract(DateTime.Now).TotalSeconds;
                                     if (s_i_i <= 0 && s_i_i > -10)
@@ -173,7 +168,7 @@ namespace YUNkefu.Core
                             }
                         }
                     }
-                    System.Threading.Thread.Sleep(5000);
+                    System.Threading.Thread.Sleep(1000);
                     foreach (var k in _taskDic)
                     {
                         //通知发送
@@ -193,7 +188,7 @@ namespace YUNkefu.Core
                                     GroupUserName = gUserNames
                                 };
                                 OnNotifySend(args);
-                                System.Threading.Thread.Sleep(500);
+                                System.Threading.Thread.Sleep(1500);
                             }
                         }
                     }

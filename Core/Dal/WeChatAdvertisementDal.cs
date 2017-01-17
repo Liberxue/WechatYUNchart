@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Data;
 using System.Web;
 
@@ -19,11 +16,12 @@ namespace YUNkefu.Core.Dal
         /// <returns></returns>
         public static DataTable QueryTask(string robotid)
         {
-            string sql = string.Format("select * from WeChatAdvertisement WHERE RobotId='{0}' and BeginTime<=getdate() and ENDtime>=getdate()",
-                   robotid);
+            
+            string sql = string.Format("select * from WeChatAdvertisement where robotid='{0}' and BeginTime<='{1}' and ENDtime>='{1}'",
+                   robotid, DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
             var dt = DbHelperSQL.Query(sql).Tables[0];
             HttpRuntime.Cache.Insert("adver", dt);
-            return dt;            
+            return dt;         
         }
 
         /// <summary>
@@ -34,7 +32,7 @@ namespace YUNkefu.Core.Dal
         public static bool UpdateLastSendTime(string adverId)
         {
             string sql = string.Format("UPDATE WeChatAdvertisement set LastSendTime='{0}' WHERE  AdverId='{1}'",
-                DateTime.Now.ToString("yyyy-MM-dd HH:mm"), adverId);
+                  DateTime.Now.ToString("yyyy-MM-dd HH:mm"), adverId);
             return DbHelperSQL.ExecuteSql(sql) > 0;
         }
     }

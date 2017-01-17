@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Version>10.0.0.3</Version>
+  <Remark>测试下自动更新
+测试下自动更新
+
+测试下自动更新
+
+测试下自动更新
+测试下自动更新
+hjkjjkljkljkjkjkjkjkjkjk
+
+]ghghhg
+测试下自动更新</Remark>
+  <Files>
+    <File Name="upfile\gengxi.txt" Version="20161107023444" Size="0" />
+    <File Name="upfile\upfine.zip" Version="20161026012752" Size="131187" />
+    <File Name="upfile\UpdateFileServer.exe" Version="20151116080608" Size="185344" />
+  </Files>
+</Config>

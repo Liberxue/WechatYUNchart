@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using System.Text;
 using System.Net;
 using System.IO;
@@ -14,9 +13,9 @@ namespace YUNkefu.Http
         /// cookie容器
         /// </summary>
         public static Dictionary<string, CookieContainer> CookiesContainerDic = new Dictionary<string, CookieContainer>();
-                
 
-        public static byte[] SendGetRequest(string url,string uid)
+
+        public static byte[] SendGetRequest(string url, string uid)
         {
             try
             {
@@ -54,7 +53,7 @@ namespace YUNkefu.Http
                 }
                 return buf;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return null;
@@ -129,8 +128,8 @@ namespace YUNkefu.Http
                     }
 
                     request.CookieContainer = _cookiesContainer;  //启用cookie
-                }               
-                
+                }
+
 
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                 Stream response_stream = response.GetResponseStream();
@@ -161,6 +160,31 @@ namespace YUNkefu.Http
         {
             TimeSpan ts = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0);
             return Convert.ToInt64(ts.TotalSeconds).ToString();
-        } 
+        }
+        /// <summary>
+        /// Http下载文件
+        /// </summary>
+        public static string HttpDownloadFile(string url, string uid, string path)
+        {
+            try
+            {
+                byte[] bytes = SendGetRequest(url, uid);
+
+                using (StreamWriter sw = new StreamWriter(path, false))
+                {
+                    sw.Write(bytes);
+                }
+
+                File.WriteAllBytes(path, bytes);
+                //////创建本地文件写入流
+                //Stream stream = new FileStream(path, FileMode.Create);
+                //stream.Write(bytes, 0, bytes.Length);
+                return path;
+            }
+            catch
+            {
+                return null;
+            }
+        }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 using YUNkefu.Core.Entity;
@@ -22,10 +21,10 @@ namespace YUNkefu.Controls
         public WChatList()
         {
             InitializeComponent();
-            DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            DrawMode = DrawMode.OwnerDrawVariable;
             SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint, true);
             UpdateStyles();
-            BorderStyle = System.Windows.Forms.BorderStyle.None;
+            BorderStyle = BorderStyle.None;
             Cursor = Cursors.Hand;
 
         }
@@ -57,7 +56,7 @@ namespace YUNkefu.Controls
                         e.Graphics.FillRectangle(Brushes.LightGray, bound);
                     }
                     e.Graphics.DrawLine(new Pen(Color.FromArgb(50,Color.Black)), new Point(bound.X, bound.Y + 70), new Point(bound.X + Width, bound.Y + 70));
-                    using (Font f = new System.Drawing.Font("微软雅黑", 11))
+                    using (Font f = new Font("微软雅黑", 11))
                     {
                         if (user.Icon != null)
                         {
@@ -73,18 +72,18 @@ namespace YUNkefu.Controls
                         {
                             string time_str = list_unread[list_unread.Count - 1].Time.ToShortTimeString();
                             Size time_size = TextRenderer.MeasureText(time_str, f2);
-                            e.Graphics.DrawString(time_str, f2, new SolidBrush(Color.FromArgb(248,248,255)), new PointF(bound.X + Width - time_size.Width - 13, bound.Y + 8)); //最后一条未读消息时间
+                            e.Graphics.DrawString(time_str, f2, new SolidBrush(Color.FromArgb(0, 0, 0)), new PointF(bound.X + Width - time_size.Width - 13, bound.Y + 8)); //最后一条未读消息时间
 
                             string latest_msg = list_unread[list_unread.Count - 1].Msg.ToString();  //最后一条未读消息
                             latest_msg = latest_msg.Length <= 10 ? latest_msg : latest_msg.Substring(0, 10) + "...";
                             latest_msg = "[" + list_unread.Count + "条] " + latest_msg;
                             Size latest_msg_size = TextRenderer.MeasureText(latest_msg, f2);
-                            e.Graphics.DrawString(latest_msg, f2, new SolidBrush(Color.FromArgb(248,248,255)), new PointF(bound.X + 70, bound.Y + 40));
+                            e.Graphics.DrawString(latest_msg, f2, new SolidBrush(Color.FromArgb(0, 0, 0)), new PointF(bound.X + 70, bound.Y + 40));
                         }
                         using (Font f3 = new Font("微软雅黑", 8))  //未读消息条数  小红圆点
                         {
                             e.Graphics.FillEllipse(Brushes.Red, new Rectangle(bound.X + 10 + 50 - 9, bound.Y + 10 - 9, 18, 18));
-                            e.Graphics.DrawString((list_unread.Count < 10 ? list_unread.Count.ToString() : "*"), f3, Brushes.White, new PointF(bound.X + 10 + 50 - 5, bound.Y + 10 - 7));
+                            e.Graphics.DrawString((list_unread.Count < 10 ? list_unread.Count.ToString() : "..."), f3, Brushes.White, new PointF(bound.X + 10 + 50 - 5, bound.Y + 10 - 7));
                         }
                     }
                     else //否则 显示最新的一条消息
@@ -95,12 +94,12 @@ namespace YUNkefu.Controls
                             {
                                 string time_str = latest.Time.ToShortTimeString();
                                 Size time_size = TextRenderer.MeasureText(time_str, f2);
-                                e.Graphics.DrawString(time_str, f2, new SolidBrush(Color.FromArgb(248,248,255)), new PointF(bound.X + Width - time_size.Width - 13, bound.Y + 8)); //最后一条未读消息时间
+                                e.Graphics.DrawString(time_str, f2, new SolidBrush(Color.FromArgb(255,69,0)), new PointF(bound.X + Width - time_size.Width - 13, bound.Y + 8)); //最后一条未读消息时间
 
                                 string latest_msg = latest.Msg.ToString();  //最新一条消息
                                 latest_msg = latest_msg.Length <= 10 ? latest_msg : latest_msg.Substring(0, 10) + "...";
                                 Size latest_msg_size = TextRenderer.MeasureText(latest_msg, f2);
-                                e.Graphics.DrawString(latest_msg, f2, new SolidBrush(Color.FromArgb(248,248,255)), new PointF(bound.X + 70, bound.Y + 40));
+                                e.Graphics.DrawString(latest_msg, f2, new SolidBrush(Color.FromArgb(0, 0, 0)), new PointF(bound.X + 70, bound.Y + 40));
                             }
                         }
                     }
@@ -136,10 +135,7 @@ namespace YUNkefu.Controls
             if (SelectedIndex != -1)
             {
                 //开启聊天
-                if (StartChat != null)
-                {
-                    StartChat(Items[SelectedIndex] as WXUser);
-                }
+                StartChat.Invoke(Items[SelectedIndex] as WXUser);
             }
         }
         /// <summary>
@@ -173,15 +169,15 @@ namespace YUNkefu.Controls
 
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            components = new System.ComponentModel.Container();
+            timer1 = new Timer(components);
             this.SuspendLayout();
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 200;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            timer1.Enabled = true;
+            this.timer1.Interval = 2;
+            this.timer1.Tick += new EventHandler(this.timer1_Tick);
             this.ResumeLayout(false);
 
         }

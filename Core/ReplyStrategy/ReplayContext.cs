@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-using System.Text;
-using YUNkefu.Core.Entity;
+﻿using YUNkefu.Core.Entity;
 
 namespace YUNkefu.Core.ReplyStrategy
 {

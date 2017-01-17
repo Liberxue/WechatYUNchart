@@ -1,0 +1,12 @@
+E:\C#program\WindowsFormsApplication3\新建文件夹\testmytabcontrol\bin\Debug\testmytabcontrol.exe
+E:\C#program\WindowsFormsApplication3\新建文件夹\testmytabcontrol\bin\Debug\testmytabcontrol.pdb
+E:\C#program\WindowsFormsApplication3\新建文件夹\testmytabcontrol\bin\Debug\MyTabControl.dll
+E:\C#program\WindowsFormsApplication3\新建文件夹\testmytabcontrol\bin\Debug\MyTabControl.pdb
+E:\C#program\WindowsFormsApplication3\新建文件夹\testmytabcontrol\bin\Debug\MyTabControl.xml
+E:\C#program\WindowsFormsApplication3\新建文件夹\testmytabcontrol\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\C#program\WindowsFormsApplication3\新建文件夹\testmytabcontrol\obj\x86\Debug\testmytabcontrol.Form1.resources
+E:\C#program\WindowsFormsApplication3\新建文件夹\testmytabcontrol\obj\x86\Debug\testmytabcontrol.Properties.Resources.resources
+E:\C#program\WindowsFormsApplication3\新建文件夹\testmytabcontrol\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\C#program\WindowsFormsApplication3\新建文件夹\testmytabcontrol\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\C#program\WindowsFormsApplication3\新建文件夹\testmytabcontrol\obj\x86\Debug\testmytabcontrol.exe
+E:\C#program\WindowsFormsApplication3\新建文件夹\testmytabcontrol\obj\x86\Debug\testmytabcontrol.pdb

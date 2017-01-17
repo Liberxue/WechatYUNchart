@@ -15,7 +15,7 @@ namespace YUNkefu.Controls
         public WTabControl()
         {
             SizeMode = TabSizeMode.Fixed;
-            ItemSize = new System.Drawing.Size(this.Width / 3 - 1, 80);
+            ItemSize = new System.Drawing.Size(this.Width / 3 - 1, 60);
             Alignment = TabAlignment.Top;
             //自绘
             base.SetStyle(
@@ -35,16 +35,16 @@ namespace YUNkefu.Controls
             base.OnPaint(e);
             if (ItemSize.Width != ClientRectangle.Width / 3 - 1)
             {
-                ItemSize = new Size(ClientRectangle.Width / 3 - 1, 80);
+                ItemSize = new Size(ClientRectangle.Width / 3 - 1, 60);
             }
-            using (SolidBrush sb = new SolidBrush(Color.FromArgb(0,0,0)))
+            using (SolidBrush sb = new SolidBrush(Color.FromArgb(245,245,245)))
             {
                 Rectangle all_back = new Rectangle(1, 1, Width - 2, Height - 2);  //整个背景区域
                 e.Graphics.FillRectangle(sb, all_back);
 
                 Rectangle back = new Rectangle(1, 1, Width - 3, Height -  ItemSize.Height - 2);  //客户区
                 e.Graphics.FillRectangle(Brushes.White, back);
-                e.Graphics.DrawRectangle(Pens.Gray, back);
+                e.Graphics.DrawRectangle(Pens.White, back);//矩形边框
 
                 using (Font f = new Font("微软雅黑", 12))
                 {
@@ -56,16 +56,16 @@ namespace YUNkefu.Controls
 
                         if (this.SelectedTab == tab || TabPages.IndexOf(tab) == _mouse_over)
                         {
-                            using (SolidBrush bsb = new SolidBrush(Color.FromArgb(0,128,0)))
+                            using (SolidBrush bsb = new SolidBrush(Color.FromArgb(128,128,128)))
                             {
                                 e.Graphics.FillRectangle(bsb, tab_rect);
                             }
-                            e.Graphics.DrawString(tab.Text, f, Brushes.White, new PointF(tab_rect.X + (tab_rect.Width - size_tab_text.Width)/2, tab_rect.Y + 20));
+                            e.Graphics.DrawString(tab.Text, f, Brushes.MintCream, new PointF(tab_rect.X + (tab_rect.Width - size_tab_text.Width) / 2, tab_rect.Y + 20));
                         }
                         else
                         {
                             e.Graphics.FillRectangle(sb, tab_rect);
-                            e.Graphics.DrawString(tab.Text, f, Brushes.White, new PointF(tab_rect.X + (tab_rect.Width - size_tab_text.Width) / 2, tab_rect.Y + 20));
+                            e.Graphics.DrawString(tab.Text, f, Brushes.Black, new PointF(tab_rect.X + (tab_rect.Width - size_tab_text.Width) / 2, tab_rect.Y + 20));
                         }
                     }
                 }

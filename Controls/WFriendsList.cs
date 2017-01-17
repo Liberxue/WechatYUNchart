@@ -26,7 +26,6 @@ namespace YUNkefu.Controls
             UpdateStyles();
             BorderStyle = System.Windows.Forms.BorderStyle.None;
             Cursor = Cursors.Hand;
-
             InitializeComponent();
             timer1.Start();
 
@@ -53,20 +52,20 @@ namespace YUNkefu.Controls
                     }
                     if (_mouse_over == i)
                     {
-                        e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(20, 248,248,255)), bound);
+                        e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(5, 248,248,255)), bound);//边框颜色
                     }
                     if (SelectedIndex == i)
                     {
-                        e.Graphics.FillRectangle(Brushes.LightGray, bound);
+                        e.Graphics.FillRectangle(Brushes.Gainsboro, bound);
                     }
-                    e.Graphics.DrawLine(new Pen(Color.FromArgb(50, Color.Black)), new Point(bound.X, bound.Y + 50), new Point(bound.X + Width, bound.Y + 50));
+                    e.Graphics.DrawLine(new Pen(Color.FromArgb(50, Color.Black)), new Point(bound.X, bound.Y + 70), new Point(bound.X + Width, bound.Y + 70));
                     using (Font f = new System.Drawing.Font("微软雅黑", 11))
                     {
                         if (user.Icon != null)
                         {
-                            e.Graphics.DrawImage(user.Icon, new Rectangle(bound.X + 8, bound.Y + 8, 34, 34));  //头像
+                            e.Graphics.DrawImage(user.Icon, new Rectangle(bound.X + 8, bound.Y + 8, 50, 50));  //头像
                         }
-                        e.Graphics.DrawString(user.ShowName, f, Brushes.Black, new PointF(bound.X + 50, bound.Y + 16)); //昵称
+                        e.Graphics.DrawString(user.ShowName, f, Brushes.Black, new PointF(bound.X + 70, bound.Y + 16)); //昵称
                     }
                 }
                 else  //分类项
@@ -79,7 +78,7 @@ namespace YUNkefu.Controls
                     using (Font f = new Font("微软雅黑", 15))
                     {
                         e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(150, Color.Gray)), bound);
-                        e.Graphics.DrawString(Items[i].ToString(), f, Brushes.Black, new PointF(bound.X + 10, bound.Y + 3));
+                        e.Graphics.DrawString(Items[i].ToString(), f, Brushes.Gainsboro, new PointF(bound.X + 10, bound.Y + 3));
                     }
                 }
             }
@@ -95,11 +94,11 @@ namespace YUNkefu.Controls
             {
                 if (Items[e.Index] as WXUser != null)  //好友项
                 {
-                    e.ItemHeight = 50;
+                    e.ItemHeight = 70;
                 }
                 else //分类项
                 {
-                    e.ItemHeight = 30;
+                    e.ItemHeight = 28;
                 }
             }
         }
@@ -168,7 +167,6 @@ namespace YUNkefu.Controls
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 200;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             this.ResumeLayout(false);
 

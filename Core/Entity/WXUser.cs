@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Drawing;
 using YUNkefu.Http;
 
@@ -10,6 +9,9 @@ namespace YUNkefu.Core.Entity
     [Serializable]
     public class WXUser
     {
+        /// <summary>
+        /// 微信唯一标识
+        /// </summary>
         public string uin { get; set; }
         /// <summary>
         /// 用户ID
@@ -61,7 +63,7 @@ namespace YUNkefu.Core.Entity
         /// <summary>
         /// 备注名拼音全屏
         /// </summary>
-   private string _remarkPYQuanPin;
+        private string _remarkPYQuanPin;
         public string RemarkPYQuanPin
         {
             get
@@ -73,7 +75,7 @@ namespace YUNkefu.Core.Entity
                 _remarkPYQuanPin = value;
             }
         }
-        private Image _icon=null;
+        private Image _icon = null;
         private bool _loading_icon = false;
 
         /// <summary>
@@ -91,15 +93,15 @@ namespace YUNkefu.Core.Entity
                         WXService wxs = new WXService();
                         if (UserName.Contains("@@"))  //讨论组
                         {
-                            _icon = wxs.GetHeadImg(UserName);
+                            _icon = wxs.GetIcon(HeadImgUrl, uin);
                         }
                         else if (UserName.Contains("@"))  //好友
                         {
-                            _icon = wxs.GetIcon(UserName, uin);
+                            _icon = wxs.GetIcon(HeadImgUrl, uin);
                         }
                         else
                         {
-                            _icon = wxs.GetIcon(UserName, uin);
+                            _icon = wxs.GetIcon(HeadImgUrl, uin);
                         }
                         _loading_icon = false;
                     })).BeginInvoke(null, null);
@@ -118,7 +120,7 @@ namespace YUNkefu.Core.Entity
                 return (RemarkName == null || RemarkName == "") ? NickName : RemarkName;
             }
         }
-         /// <summary>
+        /// <summary>
         /// 显示的拼音全拼
         /// </summary>
         public string ShowPinYin
@@ -161,7 +163,17 @@ namespace YUNkefu.Core.Entity
             if (MsgRecved != null)
             {
                 MsgRecved(msg);
+                return;
             }
+            //try
+            //{
+            //    _recvedMsg.Add(msg.Time, msg);
+            //}
+            //catch
+            //{
+            //    // MsgRecved(null);
+            //    return;
+            //}
         }
         /// <summary>
         /// 向该用户发送消息
@@ -169,17 +181,20 @@ namespace YUNkefu.Core.Entity
         /// <param name="msg"></param>
         public void SendMsg(WXMsg msg, bool showOnly)
         {
-            //发送
-            if (!showOnly)
+            try
             {
-                WXService wxs = new WXService();
-                wxs.SendMsg(msg.Msg, msg.From, msg.To, msg.Type);
+                if (!showOnly)
+                {
+                    WXService wxs = new WXService();
+                    wxs.SendMsg(msg.Msg, msg.From, msg.To, msg.Type, msg.Uin, msg.Sid);
+                }
+                _sentMsg.Add(msg.Time, msg);
+                MsgSent.Invoke(msg);
             }
-
-            _sentMsg.Add(msg.Time, msg);
-            if (MsgSent != null)
+            catch
             {
-                MsgSent(msg);
+
+                return;
             }
         }
         /// <summary>
@@ -210,7 +225,7 @@ namespace YUNkefu.Core.Entity
         public WXMsg GetLatestMsg()
         {
             WXMsg msg = null;
-            if (_sentMsg.Count > 0 && _recvedMsg.Count>0)
+            if (_sentMsg.Count > 0 && _recvedMsg.Count > 0)
             {
                 msg = _sentMsg.Last().Value.Time > _recvedMsg.Last().Value.Time ? _sentMsg.Last().Value : _recvedMsg.Last().Value;
             }
@@ -239,18 +254,18 @@ namespace YUNkefu.Core.Entity
     /// </summary>
     /// <param name="msg"></param>
     public delegate void MsgRecvedEventHandler(WXMsg msg);
-    }
+}
 
-    /// <summary>
-    /// 微信群内成员信息
-    /// </summary>
-    [Serializable]
-    public class GroupWxUser
-    {
-        public string UserName{get;set;}
-        public string NickName{get;set;}
-        public string DisplayName{get;set;}
-        public string AttrStatus { get; set; }
-    }
-    
+/// <summary>
+/// 微信群内成员信息
+/// </summary>
+[Serializable]
+public class GroupWxUser
+{
+    public string UserName { get; set; }
+    public string NickName { get; set; }
+    public string DisplayName { get; set; }
+    public string AttrStatus { get; set; }
+}
+
 

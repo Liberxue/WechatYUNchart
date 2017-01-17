@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 
 using System.Text;
-using YUNkefu.Http;
-using System.Security.Cryptography;
 using System.IO;
 using System.Net;
 using Newtonsoft.Json;
@@ -16,10 +13,10 @@ namespace YUNkefu.Core
     /// </summary>
     public class TuLingRobot
     {
-        private static string apiKey = "526ffff0ac3c452b80e7a65dbf5124df";
-        private static string secret = "6833de7e1338c3c3";
+        private static string apiKey = "eb9b18d5d3c744ed81aa260ddad630ad";
+        private static string secret = "2781964098965f0d";
         private static string apiurl = "http://www.tuling123.com/openapi/api"; //接口地址
-        private static string userName = "wzxiang06";
+        private static string userName = "013机器人";
 
 
         public static string GetTextReply(string text)

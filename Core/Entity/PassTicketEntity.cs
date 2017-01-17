@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-
-using System.Text;
 
 namespace YUNkefu.Core.Entity
 {
@@ -18,5 +15,6 @@ namespace YUNkefu.Core.Entity
         public string SKey { get; set; }
 
         public string PassTicket { get; set; }
+        public string WXUser_url { get; set; }
     }
 }

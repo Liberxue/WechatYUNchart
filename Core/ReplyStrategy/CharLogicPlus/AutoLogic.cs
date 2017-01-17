@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-using System.Text;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using YUNkefu.Core.Entity;
 using YUNkefu.Core.Dal;
 
@@ -17,9 +13,9 @@ namespace YUNkefu.Core.ReplyStrategy.CharLogicPlus
             base(contact,msg)
         {
         }
-        public override Entity.SendMsg MakeLogic()
+        public override SendMsg MakeLogic()
         {
-            var m = new Entity.SendMsg()
+            var m = new SendMsg()
             {
                 type = 1,
                 context = string.Empty
@@ -39,6 +35,7 @@ namespace YUNkefu.Core.ReplyStrategy.CharLogicPlus
                 var g = r.Match(base.Msg.Msg).Groups;
                 var nickName = base.Contact.GetGMemberNickName(Msg.From, g[1].ToString());
                 var context = g[2].ToString();
+                //个人机器人设置
                 if (context == "") context = "你要说点什么呢";
                 m.context = "@" + nickName + " " + TuLingRobot.GetTextReply(context).Replace("<br>", "\r\n");
             }

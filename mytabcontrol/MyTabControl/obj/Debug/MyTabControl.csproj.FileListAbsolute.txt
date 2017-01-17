@@ -1,0 +1,6 @@
+D:\013-YunKefu-develop\YunKefu\mytabcontrol\MyTabControl\bin\Debug\MyTabControl.XML
+D:\013-YunKefu-develop\YunKefu\mytabcontrol\MyTabControl\bin\Debug\MyTabControl.dll
+D:\013-YunKefu-develop\YunKefu\mytabcontrol\MyTabControl\bin\Debug\MyTabControl.pdb
+D:\013-YunKefu-develop\YunKefu\mytabcontrol\MyTabControl\obj\Debug\MyTabControl.csprojResolveAssemblyReference.cache
+D:\013-YunKefu-develop\YunKefu\mytabcontrol\MyTabControl\obj\Debug\MyTabControl.dll
+D:\013-YunKefu-develop\YunKefu\mytabcontrol\MyTabControl\obj\Debug\MyTabControl.pdb

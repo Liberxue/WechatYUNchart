@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using YUNkefu.Core.Entity;
 
@@ -101,10 +97,7 @@ namespace YUNkefu.Controls
         /// <param name="e"></param>
         private void btnSendMsg_Click(object sender, EventArgs e)
         {
-            if (StartChat != null)
-            {
-                StartChat(_friendUser);
-            }
+            StartChat.Invoke(_friendUser);
         }
         /// <summary>
         /// 刷新头像

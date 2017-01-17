@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-using System.Text;
-using YUNkefu.Core.Entity;
+﻿using YUNkefu.Core.Entity;
 
 namespace YUNkefu.Core.ReplyStrategy
 {
@@ -11,11 +7,11 @@ namespace YUNkefu.Core.ReplyStrategy
     /// </summary>
     public class RedWalletLogic:IReplyLogic
     {
-        public SendMsg MakeContent(Entity.WXMsg msg)
+        public SendMsg MakeContent(WXMsg msg)
         {
             SendMsg m = new SendMsg();
             m.type = 1;
-            m.context="恭喜发财，红包拿来";
+            m.context="云客服提醒：恭喜发财，红包拿来";
             return m;            
         }
     }

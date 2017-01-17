@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YUNkefu", "YUNkefu.csproj", "{33E7915E-8F4B-47E7-AF38-13F7680E800C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChat.NET", "..\WeChat.013r\WeChat.NET\WeChat.NET.csproj", "{286D078F-2829-4B0D-A355-FD4D25BFBEB4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlertLib", "C:\Users\Administrator.1Q5ZHNM203SQFIH\Desktop\AlertFormTest_3aeba8df-3185-4fa6-8754-58a40704541c\AlertLib\AlertLib.csproj", "{F61AF749-6849-4603-93EB-9CD4CD330487}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shisan13", "..\SkinForm\shisan13.csproj", "{7F988DDA-955F-42F2-82EB-D6058FB7FF75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,26 +27,18 @@ Global
 		{33E7915E-8F4B-47E7-AF38-13F7680E800C}.Release|Mixed Platforms.Build.0 = Release|x86
 		{33E7915E-8F4B-47E7-AF38-13F7680E800C}.Release|x86.ActiveCfg = Release|x86
 		{33E7915E-8F4B-47E7-AF38-13F7680E800C}.Release|x86.Build.0 = Release|x86
-		{286D078F-2829-4B0D-A355-FD4D25BFBEB4}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{286D078F-2829-4B0D-A355-FD4D25BFBEB4}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{286D078F-2829-4B0D-A355-FD4D25BFBEB4}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{286D078F-2829-4B0D-A355-FD4D25BFBEB4}.Debug|x86.ActiveCfg = Debug|x86
-		{286D078F-2829-4B0D-A355-FD4D25BFBEB4}.Debug|x86.Build.0 = Debug|x86
-		{286D078F-2829-4B0D-A355-FD4D25BFBEB4}.Release|Any CPU.ActiveCfg = Release|x86
-		{286D078F-2829-4B0D-A355-FD4D25BFBEB4}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{286D078F-2829-4B0D-A355-FD4D25BFBEB4}.Release|Mixed Platforms.Build.0 = Release|x86
-		{286D078F-2829-4B0D-A355-FD4D25BFBEB4}.Release|x86.ActiveCfg = Release|x86
-		{286D078F-2829-4B0D-A355-FD4D25BFBEB4}.Release|x86.Build.0 = Release|x86
-		{F61AF749-6849-4603-93EB-9CD4CD330487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F61AF749-6849-4603-93EB-9CD4CD330487}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F61AF749-6849-4603-93EB-9CD4CD330487}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{F61AF749-6849-4603-93EB-9CD4CD330487}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{F61AF749-6849-4603-93EB-9CD4CD330487}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{F61AF749-6849-4603-93EB-9CD4CD330487}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F61AF749-6849-4603-93EB-9CD4CD330487}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F61AF749-6849-4603-93EB-9CD4CD330487}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{F61AF749-6849-4603-93EB-9CD4CD330487}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{F61AF749-6849-4603-93EB-9CD4CD330487}.Release|x86.ActiveCfg = Release|Any CPU
+		{7F988DDA-955F-42F2-82EB-D6058FB7FF75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F988DDA-955F-42F2-82EB-D6058FB7FF75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F988DDA-955F-42F2-82EB-D6058FB7FF75}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7F988DDA-955F-42F2-82EB-D6058FB7FF75}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7F988DDA-955F-42F2-82EB-D6058FB7FF75}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7F988DDA-955F-42F2-82EB-D6058FB7FF75}.Debug|x86.Build.0 = Debug|Any CPU
+		{7F988DDA-955F-42F2-82EB-D6058FB7FF75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F988DDA-955F-42F2-82EB-D6058FB7FF75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F988DDA-955F-42F2-82EB-D6058FB7FF75}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7F988DDA-955F-42F2-82EB-D6058FB7FF75}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7F988DDA-955F-42F2-82EB-D6058FB7FF75}.Release|x86.ActiveCfg = Release|Any CPU
+		{7F988DDA-955F-42F2-82EB-D6058FB7FF75}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

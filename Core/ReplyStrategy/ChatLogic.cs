@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-using System.Text;
-using YUNkefu.Core.Dal;
-using System.Text.RegularExpressions;
-using YUNkefu.Core.Entity;
-using System.Web;
+﻿using YUNkefu.Core.Entity;
 using YUNkefu.Core.ReplyStrategy.CharLogicPlus;
 
 namespace YUNkefu.Core.ReplyStrategy
@@ -15,7 +8,7 @@ namespace YUNkefu.Core.ReplyStrategy
     /// </summary>
     public class ChatLogic:IReplyLogic
     {
-        public SendMsg MakeContent(Entity.WXMsg msg)
+        public SendMsg MakeContent(WXMsg msg)
         {
             SendMsg m = new SendMsg();
             m.type = 1;

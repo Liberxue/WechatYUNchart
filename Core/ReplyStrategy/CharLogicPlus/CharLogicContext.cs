@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-using System.Text;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using YUNkefu.Core.Entity;
 
 namespace YUNkefu.Core.ReplyStrategy.CharLogicPlus
@@ -10,7 +6,7 @@ namespace YUNkefu.Core.ReplyStrategy.CharLogicPlus
     public class CharLogicContext
     {
         WxContact contact;
-        Entity.WXMsg msg;
+        WXMsg msg;
         public CharLogicContext(WxContact contact, Entity.WXMsg msg)
         {
             this.contact = contact;

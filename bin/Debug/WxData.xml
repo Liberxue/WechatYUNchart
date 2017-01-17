@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GB2312"?>
+<FinanceRecord>
+  <Account>
+    <a weixin="上官云" id="1504625000000025" />
+    <a weixin="4" id="23456789" />
+  </Account>
+  <RecordList>
+  </RecordList>
+</FinanceRecord>

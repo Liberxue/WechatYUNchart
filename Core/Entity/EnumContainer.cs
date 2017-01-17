@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-using System.Text;
-
-namespace YUNkefu.Core.Entity
+﻿namespace YUNkefu.Core.Entity
 {
     public class EnumContainer
     {

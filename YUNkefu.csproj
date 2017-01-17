@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>YUNkefu</RootNamespace>
     <AssemblyName>YUNkefu</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -39,6 +39,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -48,9 +50,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\Wechat.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
@@ -60,6 +63,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Libs\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="shisan13, Version=13.13.13.16, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\shisan13.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web" />
@@ -68,6 +75,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="WebKit.Interop">
       <HintPath>..\WeChat.013r\WeChat.NET\bin\Debug\WebKit.Interop.dll</HintPath>
@@ -79,11 +87,44 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlertForm.cs">
+    <Compile Include="frmWaitingBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AlertForm.Designer.cs">
-      <DependentUpon>AlertForm.cs</DependentUpon>
+    <Compile Include="frmWaitingBox.Designer.cs">
+      <DependentUpon>frmWaitingBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wx_alogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wx_alogin.Designer.cs">
+      <DependentUpon>Wx_alogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\UpDownButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Wx_MainLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wx_MainLogin.Designer.cs">
+      <DependentUpon>Wx_MainLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wxlogin\MyEncrypt.cs" />
+    <Compile Include="Wxlogin\User.cs" />
+    <Compile Include="Wxlogin\Yihuyun.cs" />
+    <Compile Include="Wx_AlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wx_AlertForm.Designer.cs">
+      <DependentUpon>Wx_AlertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\myButtonCheck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\myButtonCheck.Designer.cs">
+      <DependentUpon>myButtonCheck.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\WChatBox.cs">
       <SubType>UserControl</SubType>
@@ -142,31 +183,50 @@
     <Compile Include="Core\TuLingRobot.cs" />
     <Compile Include="Core\WxSerializable.cs" />
     <Compile Include="Core\WxTaskCore.cs" />
-    <Compile Include="wechart.cs">
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Wx_wechart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="wechart.Designer.cs">
-      <DependentUpon>wechart.cs</DependentUpon>
+    <Compile Include="Wx_wechart.Designer.cs">
+      <DependentUpon>Wx_wechart.cs</DependentUpon>
     </Compile>
     <Compile Include="Http\HttpService.cs" />
     <Compile Include="Http\LoginService.cs" />
     <Compile Include="Http\WXService.cs" />
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Wx_LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="Wx_LoginForm.Designer.cs">
+      <DependentUpon>Wx_LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainFrom.cs">
+    <Compile Include="Wx_MainFrom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainFrom.Designer.cs">
-      <DependentUpon>MainFrom.cs</DependentUpon>
+    <Compile Include="Wx_MainFrom.Designer.cs">
+      <DependentUpon>Wx_MainFrom.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AlertForm.resx">
-      <DependentUpon>AlertForm.cs</DependentUpon>
+    <Compile Include="Wxlogin\Xmloperation.cs" />
+    <EmbeddedResource Include="frmWaitingBox.resx">
+      <DependentUpon>frmWaitingBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wx_alogin.resx">
+      <DependentUpon>Wx_alogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wx_MainLogin.resx">
+      <DependentUpon>Wx_MainLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wx_AlertForm.resx">
+      <DependentUpon>Wx_AlertForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\myButtonCheck.resx">
+      <DependentUpon>myButtonCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\WChatBox.resx">
       <DependentUpon>WChatBox.cs</DependentUpon>
@@ -180,26 +240,21 @@
     <EmbeddedResource Include="Controls\WPersonalInfo.resx">
       <DependentUpon>WPersonalInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="wechart.resx">
-      <DependentUpon>wechart.cs</DependentUpon>
+    <EmbeddedResource Include="Wx_wechart.resx">
+      <DependentUpon>Wx_wechart.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="Wx_LoginForm.resx">
+      <DependentUpon>Wx_LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainFrom.resx">
-      <DependentUpon>MainFrom.cs</DependentUpon>
+    <EmbeddedResource Include="Wx_MainFrom.resx">
+      <DependentUpon>Wx_MainFrom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="app.config" />
     <None Include="Libs\webbrowsers\WebKitBrowser.dll.manifest" />
     <None Include="Properties\Settings.settings">
@@ -236,9 +291,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Libs\Newtonsoft.Json.dll" />
-    <None Include="Resources\msg.wav" />
+    <None Include="Resources\main_light_bkg_top123.png" />
+    <None Include="Resources\info2.png" />
+    <None Include="Resources\back3.png" />
+    <None Include="Resources\loading.gif" />
+    <Content Include="Resources\Wechat.ico" />
+    <None Include="Resources\tag.png" />
+    <None Include="Resources\Music.mp3" />
+    <None Include="Resources\TJ.png" />
+    <None Include="Resources\QQ截图201612291144101.png" />
+    <None Include="Resources\QQ截图20161229114410.png" />
+    <None Include="Resources\Main_logo5.png" />
+    <None Include="Resources\Main_logo4.png" />
+    <None Include="Resources\print_spree.png" />
+    <None Include="Resources\wechat_add91.png" />
+    <None Include="Resources\mxi_hover.png" />
+    <None Include="Resources\mxi_.png" />
+    <None Include="Resources\mxi.png" />
+    <None Include="Resources\mix_dw.png" />
+    <None Include="Resources\Main_logo.png" />
+    <None Include="Resources\set_help.png" />
+    <None Include="Resources\set_close.png" />
+    <None Include="Resources\wechat_dw.png" />
+    <None Include="Resources\wechat_add9.png" />
+    <None Include="Resources\wechat_add8.png" />
+    <None Include="Resources\Main_head.png" />
+    <None Include="Resources\Music.wav" />
     <None Include="Resources\male.png" />
-    <None Include="Resources\045631291[1].gif" />
     <None Include="Resources\back.png" />
     <Content Include="Libs\webbrowsers\icudt40.dll" />
     <Content Include="Libs\webbrowsers\icuin40.dll" />
@@ -255,17 +334,33 @@
     <Content Include="Libs\webbrowsers\WebKit.dll" />
     <Content Include="Libs\webbrowsers\WebKit.Interop.dll" />
     <Content Include="Libs\webbrowsers\WebKitBrowser.dll" />
-    <Content Include="Resources\close.gif" />
     <None Include="Resources\female.png" />
     <None Include="Resources\holmes2.jpg" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\close_hover.png" />
+    <None Include="Resources\close_dw.png" />
+    <None Include="Resources\close6.png" />
+    <None Include="Resources\emjoy.png" />
+    <None Include="Resources\file.png" />
+    <None Include="Resources\Head.png" />
+    <None Include="Resources\Head1.png" />
+    <None Include="Resources\btncheckoff1.png" />
+    <None Include="Resources\btncheckoff2.png" />
+    <None Include="Resources\btncheckoff3.png" />
+    <None Include="Resources\btncheckoff4.png" />
+    <None Include="Resources\btncheckoff5.png" />
+    <None Include="Resources\btncheckoff6.png" />
+    <None Include="Resources\btncheckon1.png" />
+    <None Include="Resources\btncheckon2.png" />
+    <None Include="Resources\btncheckon3.png" />
+    <None Include="Resources\btncheckon4.png" />
+    <None Include="Resources\btncheckon5.png" />
+    <None Include="Resources\btncheckon6.png" />
+    <None Include="Resources\011.png" />
     <Content Include="Resources\im.png" />
     <None Include="Resources\info.png" />
     <Content Include="Resources\load.gif" />
     <Content Include="Resources\logo.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="SqlServerDal\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

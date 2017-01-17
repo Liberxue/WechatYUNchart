@@ -141,7 +141,7 @@
             // 
             // picImage
             // 
-            this.picImage.Image = global::YUNkefu.Properties.Resources.holmes2;
+            this.picImage.Image = global::YUNkefu.Properties.Resources.wechat_add;
             this.picImage.Location = new System.Drawing.Point(17, 4);
             this.picImage.Name = "picImage";
             this.picImage.Size = new System.Drawing.Size(200, 200);

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-
 using System.Text;
 using System.Drawing;
 using System.IO;
@@ -12,11 +10,7 @@ namespace YUNkefu.Http
 {
     public class LoginService
     {
-        
-
         private static string _session_id = string.Empty;
-       
-
         /// <summary>
         /// 获取登录二维码
         /// </summary>
@@ -26,8 +20,19 @@ namespace YUNkefu.Http
             byte[] bytes = HttpService.SendGetRequest(Constant._session_id_url, "");
             _session_id = Encoding.UTF8.GetString(bytes).Split(new string[] { "\"" }, StringSplitOptions.None)[1];
             bytes = HttpService.SendGetRequest(Constant._qrcode_url + _session_id, "");
-
             return Image.FromStream(new MemoryStream(bytes));
+        }
+        /// <summary>
+        /// 解析url获取qr登录地址
+        /// </summary>
+        /// <returns></returns>
+        public string GetQRCodeurl()
+        {
+            byte[] bytes = HttpService.SendGetRequest(Constant._session_id_url, "");
+            _session_id = Encoding.UTF8.GetString(bytes).Split(new string[] { "\"" }, StringSplitOptions.None)[1];
+            string wxQRurl = "";
+            wxQRurl = Constant._Aloginqrcode_url + _session_id;
+            return wxQRurl;
         }
 
         /// <summary>
@@ -58,7 +63,7 @@ namespace YUNkefu.Http
             }
             else
             {
-                return null;
+                return null; 
             }
         }
 
@@ -70,17 +75,21 @@ namespace YUNkefu.Http
             CookieContainer cookieContainer=new CookieContainer();
             byte[] bytes = HttpService.SendGetRequest(login_redirect + "&fun=new&version=v2&lang=zh_CN", ref cookieContainer);
             string pass_ticket = Encoding.UTF8.GetString(bytes);
+            string url = login_redirect; 
+            Uri uri = new Uri(url);
+            string WXUser_url = (uri.Host);
             string pass_Ticket = pass_ticket.Split(new string[] { "pass_ticket" }, StringSplitOptions.None)[1].TrimStart('>').TrimEnd('<', '/');
             string sKey = pass_ticket.Split(new string[] { "skey" }, StringSplitOptions.None)[1].TrimStart('>').TrimEnd('<', '/');
             string wxSid = pass_ticket.Split(new string[] { "wxsid" }, StringSplitOptions.None)[1].TrimStart('>').TrimEnd('<', '/');
             string wxUin = pass_ticket.Split(new string[] { "wxuin" }, StringSplitOptions.None)[1].TrimStart('>').TrimEnd('<', '/');
             
-            var passticketEntity=new Core.Entity.PassTicketEntity()
+            var passticketEntity=new PassTicketEntity()
             {
                 PassTicket = pass_Ticket,
                 SKey = sKey,
                 WxSid = wxSid,
-                WxUin = wxUin
+                WxUin = wxUin,
+                WXUser_url = WXUser_url
             };
 
             LoginCore.AddPassTicket(wxUin, passticketEntity); 

@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-
-using System.Text;
 using YUNkefu.Http;
 using Newtonsoft.Json.Linq;
-using YUNkefu.Core;
 
 namespace YUNkefu.Core.Entity
 {
@@ -22,7 +19,7 @@ namespace YUNkefu.Core.Entity
 
         public WxContact(string uin)
         {
-            this._uin = uin;
+            _uin = uin;
             var entity = LoginCore.GetPassTicket(this._uin);
             if (entity != null)
             {

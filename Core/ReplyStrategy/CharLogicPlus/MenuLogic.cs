@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-using System.Text;
-using YUNkefu.Core.Entity;
+﻿using YUNkefu.Core.Entity;
 
 namespace YUNkefu.Core.ReplyStrategy.CharLogicPlus
 {
@@ -17,7 +13,7 @@ namespace YUNkefu.Core.ReplyStrategy.CharLogicPlus
         }
         public override SendMsg MakeLogic()
         {
-            var m = new Entity.SendMsg();
+            var m = new SendMsg();
             string[] cmdArray = { "[太阳]签到",
                                "[太阳]签到排名",                                                                                  
                                "[太阳]抽签",
