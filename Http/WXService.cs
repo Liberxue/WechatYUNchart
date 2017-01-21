@@ -17,7 +17,6 @@ namespace YUNkefu.Http
         public string Uin { get; set; }
         public string Sid { get; set; }
         public string robotID { get; set; }
-
         /// <summary>
         /// 微信初始化
         /// </summary>
@@ -32,7 +31,6 @@ namespace YUNkefu.Http
                 string skey = LoginCore.GetPassTicket(Uin).SKey;
                 init_json = string.Format(init_json, Uin, Sid, skey);
                 byte[] bytes = HttpService.SendPostRequest(Constant._init_url + "&pass_ticket=" + pass_ticket, init_json, Uin);
-                //byte[] bytes = HttpService.SendPostRequest( WXUser_url+ "&pass_ticket=" + pass_ticket, init_json, Uin);
                 string init_str = Encoding.UTF8.GetString(bytes);
                 JObject init_result = JsonConvert.DeserializeObject(init_str) as JObject;
                 return init_result;

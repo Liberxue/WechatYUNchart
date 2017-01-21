@@ -64,6 +64,22 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.shisan13TabControl1 = new YUNkefu.Controls.Shisan13TabControl();
             this.WXtab = new System.Windows.Forms.TabPage();
+            this.WXMaintab = new YUNkefu.TabControlEx();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.rtLog = new System.Windows.Forms.RichTextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.Systab = new System.Windows.Forms.TabPage();
             this.wxqys = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -72,21 +88,14 @@
             this.BtImportreport = new System.Windows.Forms.Button();
             this.shisan13Label1 = new YUNkefu.Controls.Shisan13Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.wxListView1 = new YUNkefu.Controls.WxListView();
             this.shisan13TabSelector1 = new YUNkefu.Controls.Shisan13TabSelector();
             this.labOnLineCount = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.rtLog = new System.Windows.Forms.RichTextBox();
             this.cbShowWay = new System.Windows.Forms.ComboBox();
             this.pic_Mxi = new System.Windows.Forms.PictureBox();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.WXMaintab = new YUNkefu.TabControlEx();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.wxListView1 = new YUNkefu.Controls.WxListView();
             hometab = new System.Windows.Forms.TabPage();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -94,17 +103,17 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.shisan13TabControl1.SuspendLayout();
             this.WXtab.SuspendLayout();
-            this.wxqys.SuspendLayout();
-            this.Taskcenter.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Mxi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.WXMaintab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
+            this.wxqys.SuspendLayout();
+            this.Taskcenter.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Mxi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
             // 
             // hometab
@@ -184,18 +193,18 @@
             this.Del_wechart,
             this.rem_wechart});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(145, 56);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(125, 48);
             // 
             // Del_wechart
             // 
             this.Del_wechart.Name = "Del_wechart";
-            this.Del_wechart.Size = new System.Drawing.Size(144, 26);
+            this.Del_wechart.Size = new System.Drawing.Size(124, 22);
             this.Del_wechart.Text = "删除下线";
             // 
             // rem_wechart
             // 
             this.rem_wechart.Name = "rem_wechart";
-            this.rem_wechart.Size = new System.Drawing.Size(144, 26);
+            this.rem_wechart.Size = new System.Drawing.Size(124, 22);
             this.rem_wechart.Text = "转接微信";
             // 
             // label12
@@ -301,20 +310,292 @@
             // WXtab
             // 
             this.WXtab.Controls.Add(this.WXMaintab);
-            this.WXtab.Location = new System.Drawing.Point(4, 25);
+            this.WXtab.Location = new System.Drawing.Point(4, 22);
             this.WXtab.Name = "WXtab";
             this.WXtab.Padding = new System.Windows.Forms.Padding(3);
-            this.WXtab.Size = new System.Drawing.Size(1084, 719);
+            this.WXtab.Size = new System.Drawing.Size(1084, 722);
             this.WXtab.TabIndex = 0;
             this.WXtab.Text = "微信云客服";
             this.WXtab.UseVisualStyleBackColor = true;
             // 
+            // WXMaintab
+            // 
+            this.WXMaintab.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(79)))), ((int)(((byte)(125)))));
+            this.WXMaintab.BackColor = System.Drawing.Color.Transparent;
+            this.WXMaintab.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
+            this.WXMaintab.BorderColor = System.Drawing.Color.Transparent;
+            this.WXMaintab.Controls.Add(this.tabPage1);
+            this.WXMaintab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WXMaintab.HaveCloseButton = true;
+            this.WXMaintab.Location = new System.Drawing.Point(3, 3);
+            this.WXMaintab.Name = "WXMaintab";
+            this.WXMaintab.Padding = new System.Drawing.Point(9, 4);
+            this.WXMaintab.SelectedIndex = 0;
+            this.WXMaintab.ShowDrawTipText = true;
+            this.WXMaintab.Size = new System.Drawing.Size(1078, 716);
+            this.WXMaintab.TabIndex = 0;
+            this.WXMaintab.TipBackColor = System.Drawing.Color.Moccasin;
+            this.WXMaintab.TipTextColor = System.Drawing.Color.Black;
+            this.WXMaintab.标签呼吸灯颜色 = System.Drawing.Color.LightCyan;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.rtLog);
+            this.tabPage1.Controls.Add(this.label21);
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.label17);
+            this.tabPage1.Controls.Add(this.label18);
+            this.tabPage1.Controls.Add(this.label19);
+            this.tabPage1.Controls.Add(this.label20);
+            this.tabPage1.Controls.Add(this.chart1);
+            this.tabPage1.Controls.Add(this.chart4);
+            this.tabPage1.Controls.Add(this.chart2);
+            this.tabPage1.Controls.Add(this.chart3);
+            this.tabPage1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tabPage1.Location = new System.Drawing.Point(4, 28);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1070, 684);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = " 主 界 面";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // rtLog
+            // 
+            this.rtLog.BackColor = System.Drawing.Color.White;
+            this.rtLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtLog.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.rtLog.Location = new System.Drawing.Point(3, 660);
+            this.rtLog.Name = "rtLog";
+            this.rtLog.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.rtLog.Size = new System.Drawing.Size(1064, 21);
+            this.rtLog.TabIndex = 0;
+            this.rtLog.Text = "";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label21.Location = new System.Drawing.Point(449, 8);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(157, 28);
+            this.label21.TabIndex = 18;
+            this.label21.Text = "测试demo公司";
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(106)))), ((int)(((byte)(90)))));
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label13.Image = global::YUNkefu.Properties.Resources.聊天1;
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.label13.Location = new System.Drawing.Point(172, 53);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(164, 101);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "10540";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(158)))), ((int)(((byte)(4)))));
+            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label14.Image = global::YUNkefu.Properties.Resources.机器人;
+            this.label14.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.label14.Location = new System.Drawing.Point(747, 162);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(164, 101);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "49341";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(36)))), ((int)(((byte)(63)))));
+            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label15.Image = global::YUNkefu.Properties.Resources.红包;
+            this.label15.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.label15.Location = new System.Drawing.Point(545, 162);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(164, 101);
+            this.label15.TabIndex = 15;
+            this.label15.Text = "672";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(202)))), ((int)(((byte)(36)))));
+            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label16.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.label16.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label16.Image = global::YUNkefu.Properties.Resources.图片;
+            this.label16.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.label16.Location = new System.Drawing.Point(359, 162);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(164, 101);
+            this.label16.TabIndex = 14;
+            this.label16.Text = "5456";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(98)))), ((int)(((byte)(212)))));
+            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.label17.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label17.Image = global::YUNkefu.Properties.Resources.语音;
+            this.label17.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.label17.Location = new System.Drawing.Point(172, 162);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(164, 101);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "453";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(165)))), ((int)(((byte)(255)))));
+            this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label18.Image = global::YUNkefu.Properties.Resources.人1;
+            this.label18.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.label18.Location = new System.Drawing.Point(747, 53);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(164, 101);
+            this.label18.TabIndex = 12;
+            this.label18.Text = "342356";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label19.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.label19.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label19.Image = global::YUNkefu.Properties.Resources.男女;
+            this.label19.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.label19.Location = new System.Drawing.Point(545, 53);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(164, 101);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "6546";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(62)))));
+            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label20.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label20.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label20.Image = global::YUNkefu.Properties.Resources.群;
+            this.label20.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.label20.Location = new System.Drawing.Point(359, 53);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(164, 101);
+            this.label20.TabIndex = 10;
+            this.label20.Text = "456";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Alignment = System.Drawing.StringAlignment.Center;
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(657, 474);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            series1.ChartArea = "ChartArea1";
+            series1.IsValueShownAsLabel = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series2.ChartArea = "ChartArea1";
+            series2.IsValueShownAsLabel = true;
+            series2.Legend = "Legend1";
+            series2.Name = "Series2";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(382, 199);
+            this.chart1.TabIndex = 5;
+            this.chart1.Text = "chart1";
+            // 
+            // chart4
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart4.Legends.Add(legend2);
+            this.chart4.Location = new System.Drawing.Point(384, 490);
+            this.chart4.Name = "chart4";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Funnel;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart4.Series.Add(series3);
+            this.chart4.Size = new System.Drawing.Size(267, 167);
+            this.chart4.TabIndex = 4;
+            this.chart4.Text = "chart4";
+            // 
+            // chart2
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea3);
+            legend3.Alignment = System.Drawing.StringAlignment.Center;
+            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend3.Name = "Legend1";
+            this.chart2.Legends.Add(legend3);
+            this.chart2.Location = new System.Drawing.Point(87, 284);
+            this.chart2.Name = "chart2";
+            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineRange;
+            series4.IsValueShownAsLabel = true;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            series4.YValuesPerPoint = 4;
+            series5.ChartArea = "ChartArea1";
+            series5.IsValueShownAsLabel = true;
+            series5.Legend = "Legend1";
+            series5.Name = "Series2";
+            this.chart2.Series.Add(series4);
+            this.chart2.Series.Add(series5);
+            this.chart2.Size = new System.Drawing.Size(865, 207);
+            this.chart2.TabIndex = 3;
+            this.chart2.Text = "chart2";
+            // 
+            // chart3
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea4);
+            this.chart3.Location = new System.Drawing.Point(87, 490);
+            this.chart3.Name = "chart3";
+            this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.Name = "Series1";
+            this.chart3.Series.Add(series6);
+            this.chart3.Size = new System.Drawing.Size(215, 183);
+            this.chart3.TabIndex = 2;
+            // 
             // Systab
             // 
-            this.Systab.Location = new System.Drawing.Point(4, 25);
+            this.Systab.Location = new System.Drawing.Point(4, 22);
             this.Systab.Name = "Systab";
             this.Systab.Padding = new System.Windows.Forms.Padding(3);
-            this.Systab.Size = new System.Drawing.Size(1084, 719);
+            this.Systab.Size = new System.Drawing.Size(1084, 722);
             this.Systab.TabIndex = 1;
             this.Systab.Text = "管理中心";
             this.Systab.UseVisualStyleBackColor = true;
@@ -322,9 +603,9 @@
             // wxqys
             // 
             this.wxqys.Controls.Add(this.groupBox1);
-            this.wxqys.Location = new System.Drawing.Point(4, 25);
+            this.wxqys.Location = new System.Drawing.Point(4, 22);
             this.wxqys.Name = "wxqys";
-            this.wxqys.Size = new System.Drawing.Size(1084, 719);
+            this.wxqys.Size = new System.Drawing.Size(1084, 722);
             this.wxqys.TabIndex = 2;
             this.wxqys.Text = "微群管理";
             this.wxqys.UseVisualStyleBackColor = true;
@@ -340,10 +621,10 @@
             // 
             // wxchart
             // 
-            this.wxchart.Location = new System.Drawing.Point(4, 25);
+            this.wxchart.Location = new System.Drawing.Point(4, 22);
             this.wxchart.Name = "wxchart";
             this.wxchart.Padding = new System.Windows.Forms.Padding(3);
-            this.wxchart.Size = new System.Drawing.Size(1084, 719);
+            this.wxchart.Size = new System.Drawing.Size(1084, 722);
             this.wxchart.TabIndex = 3;
             this.wxchart.Text = "报表中心";
             this.wxchart.UseVisualStyleBackColor = true;
@@ -353,10 +634,10 @@
             this.Taskcenter.Controls.Add(this.BtImportreport);
             this.Taskcenter.Controls.Add(this.shisan13Label1);
             this.Taskcenter.Controls.Add(this.groupBox2);
-            this.Taskcenter.Location = new System.Drawing.Point(4, 25);
+            this.Taskcenter.Location = new System.Drawing.Point(4, 22);
             this.Taskcenter.Name = "Taskcenter";
             this.Taskcenter.Padding = new System.Windows.Forms.Padding(3);
-            this.Taskcenter.Size = new System.Drawing.Size(1084, 719);
+            this.Taskcenter.Size = new System.Drawing.Size(1084, 722);
             this.Taskcenter.TabIndex = 4;
             this.Taskcenter.Text = "任务中心";
             this.Taskcenter.UseVisualStyleBackColor = true;
@@ -375,12 +656,12 @@
             // 
             this.shisan13Label1.AutoSize = true;
             this.shisan13Label1.Depth = 0;
-            this.shisan13Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.shisan13Label1.Font = new System.Drawing.Font("Roboto", 11F);
             this.shisan13Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.shisan13Label1.Location = new System.Drawing.Point(202, 38);
             this.shisan13Label1.MouseState = YUNkefu.MouseState.HOVER;
             this.shisan13Label1.Name = "shisan13Label1";
-            this.shisan13Label1.Size = new System.Drawing.Size(86, 24);
+            this.shisan13Label1.Size = new System.Drawing.Size(73, 19);
             this.shisan13Label1.TabIndex = 1;
             this.shisan13Label1.Text = "快捷回复";
             // 
@@ -393,6 +674,19 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "快捷回复";
+            // 
+            // wxListView1
+            // 
+            this.wxListView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wxListView1.FullRowSelect = true;
+            this.wxListView1.Location = new System.Drawing.Point(3, 17);
+            this.wxListView1.Name = "wxListView1";
+            this.wxListView1.NeedDrawItemIndex = 0;
+            this.wxListView1.OwnerDraw = true;
+            this.wxListView1.Size = new System.Drawing.Size(409, 312);
+            this.wxListView1.TabIndex = 0;
+            this.wxListView1.UseCompatibleStateImageBehavior = false;
+            this.wxListView1.View = System.Windows.Forms.View.Details;
             // 
             // shisan13TabSelector1
             // 
@@ -415,7 +709,7 @@
             this.labOnLineCount.ForeColor = System.Drawing.Color.White;
             this.labOnLineCount.Location = new System.Drawing.Point(116, 5);
             this.labOnLineCount.Name = "labOnLineCount";
-            this.labOnLineCount.Size = new System.Drawing.Size(21, 24);
+            this.labOnLineCount.Size = new System.Drawing.Size(17, 20);
             this.labOnLineCount.TabIndex = 0;
             this.labOnLineCount.Text = "0";
             // 
@@ -427,21 +721,10 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(7, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 24);
+            this.label1.Size = new System.Drawing.Size(107, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "当前微信在线：";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // rtLog
-            // 
-            this.rtLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
-            this.rtLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtLog.Location = new System.Drawing.Point(354, 1);
-            this.rtLog.Name = "rtLog";
-            this.rtLog.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.rtLog.Size = new System.Drawing.Size(874, 23);
-            this.rtLog.TabIndex = 0;
-            this.rtLog.Text = "";
             // 
             // cbShowWay
             // 
@@ -452,7 +735,7 @@
             "淡出淡入"});
             this.cbShowWay.Location = new System.Drawing.Point(1258, 3);
             this.cbShowWay.Name = "cbShowWay";
-            this.cbShowWay.Size = new System.Drawing.Size(38, 23);
+            this.cbShowWay.Size = new System.Drawing.Size(38, 20);
             this.cbShowWay.TabIndex = 32;
             this.cbShowWay.Visible = false;
             this.cbShowWay.SelectedIndexChanged += new System.EventHandler(this.cbShowWay_SelectedIndexChanged);
@@ -500,138 +783,9 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // WXMaintab
-            // 
-            this.WXMaintab.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(79)))), ((int)(((byte)(125)))));
-            this.WXMaintab.BackColor = System.Drawing.Color.Transparent;
-            this.WXMaintab.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
-            this.WXMaintab.BorderColor = System.Drawing.Color.Transparent;
-            this.WXMaintab.Controls.Add(this.tabPage1);
-            this.WXMaintab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WXMaintab.HaveCloseButton = true;
-            this.WXMaintab.Location = new System.Drawing.Point(3, 3);
-            this.WXMaintab.Name = "WXMaintab";
-            this.WXMaintab.Padding = new System.Drawing.Point(9, 4);
-            this.WXMaintab.SelectedIndex = 0;
-            this.WXMaintab.ShowDrawTipText = true;
-            this.WXMaintab.Size = new System.Drawing.Size(1078, 713);
-            this.WXMaintab.TabIndex = 0;
-            this.WXMaintab.TipBackColor = System.Drawing.Color.Moccasin;
-            this.WXMaintab.TipTextColor = System.Drawing.Color.Black;
-            this.WXMaintab.标签呼吸灯颜色 = System.Drawing.Color.LightCyan;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.chart1);
-            this.tabPage1.Controls.Add(this.chart4);
-            this.tabPage1.Controls.Add(this.chart2);
-            this.tabPage1.Controls.Add(this.chart3);
-            this.tabPage1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1070, 677);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = " 主 界 面";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Alignment = System.Drawing.StringAlignment.Center;
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(559, 88);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.IsValueShownAsLabel = true;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series2.ChartArea = "ChartArea1";
-            series2.IsValueShownAsLabel = true;
-            series2.Legend = "Legend1";
-            series2.Name = "Series2";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(482, 301);
-            this.chart1.TabIndex = 5;
-            this.chart1.Text = "chart1";
-            // 
-            // chart4
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart4.Legends.Add(legend2);
-            this.chart4.Location = new System.Drawing.Point(581, 417);
-            this.chart4.Name = "chart4";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Funnel;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart4.Series.Add(series3);
-            this.chart4.Size = new System.Drawing.Size(336, 259);
-            this.chart4.TabIndex = 4;
-            this.chart4.Text = "chart4";
-            // 
-            // chart2
-            // 
-            chartArea3.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea3);
-            legend3.Alignment = System.Drawing.StringAlignment.Center;
-            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend3.Name = "Legend1";
-            this.chart2.Legends.Add(legend3);
-            this.chart2.Location = new System.Drawing.Point(71, 88);
-            this.chart2.Name = "chart2";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineRange;
-            series4.IsValueShownAsLabel = true;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            series4.YValuesPerPoint = 4;
-            series5.ChartArea = "ChartArea1";
-            series5.IsValueShownAsLabel = true;
-            series5.Legend = "Legend1";
-            series5.Name = "Series2";
-            this.chart2.Series.Add(series4);
-            this.chart2.Series.Add(series5);
-            this.chart2.Size = new System.Drawing.Size(482, 301);
-            this.chart2.TabIndex = 3;
-            this.chart2.Text = "chart2";
-            // 
-            // chart3
-            // 
-            chartArea4.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea4);
-            this.chart3.Location = new System.Drawing.Point(119, 425);
-            this.chart3.Name = "chart3";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series6.Name = "Series1";
-            this.chart3.Series.Add(series6);
-            this.chart3.Size = new System.Drawing.Size(284, 259);
-            this.chart3.TabIndex = 2;
-            // 
-            // wxListView1
-            // 
-            this.wxListView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wxListView1.FullRowSelect = true;
-            this.wxListView1.Location = new System.Drawing.Point(3, 21);
-            this.wxListView1.Name = "wxListView1";
-            this.wxListView1.NeedDrawItemIndex = 0;
-            this.wxListView1.OwnerDraw = true;
-            this.wxListView1.Size = new System.Drawing.Size(409, 308);
-            this.wxListView1.TabIndex = 0;
-            this.wxListView1.UseCompatibleStateImageBehavior = false;
-            this.wxListView1.View = System.Windows.Forms.View.Details;
-            // 
             // Wx_MainFrom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -642,7 +796,6 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.labOnLineCount);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.rtLog);
             this.Controls.Add(this.cbShowWay);
             this.Controls.Add(this.pic_Mxi);
             this.Controls.Add(this.picClose);
@@ -656,18 +809,19 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.shisan13TabControl1.ResumeLayout(false);
             this.WXtab.ResumeLayout(false);
+            this.WXMaintab.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             this.wxqys.ResumeLayout(false);
             this.Taskcenter.ResumeLayout(false);
             this.Taskcenter.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Mxi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
-            this.WXMaintab.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -718,5 +872,14 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private Controls.WxListView wxListView1;
         private System.Windows.Forms.Button BtImportreport;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
     }
 }

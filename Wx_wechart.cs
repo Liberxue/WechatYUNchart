@@ -410,22 +410,22 @@ namespace YUNkefu
                         }
                     }
                     //System.Threading.Thread.Sleep(800);
-                    #region 开始任务
-                    //var robotID = table.Rows[0]["RobotId"].ToString();
-                    WxTaskCore wt = new WxTaskCore(sid, Uin, robotID);
-                    wt.user = _me;
-                    //接收消息事件
-                    //wt.OnRevice += new WxTaskCore.Revice(wt_OnRevice);
-                    //接收修改联系人消息
-                    wt.OnModifyContact += new WxTaskCore.ModifyContact(wt_OnModifyContact);
-                    //通知发送信息
-                    wt.OnNotifySend += new WxTaskCore.NotifySend(wt_OnNotifySend);
-                    ////每一个微信号，开启一个线程
-                    //ThreadStart start = new ThreadStart(wt.ReviceMsg);
-                    //new Thread(start).Start();
-                    //启动发送线程
-                    new Thread(new ThreadStart(wt.AutoSendMsg)).Start();
-                    #endregion
+                    //#region 开始任务
+                    ////var robotID = table.Rows[0]["RobotId"].ToString();
+                    //WxTaskCore wt = new WxTaskCore(sid, Uin, robotID);
+                    //wt.user = _me;
+                    ////接收消息事件
+                    ////wt.OnRevice += new WxTaskCore.Revice(wt_OnRevice);
+                    ////接收修改联系人消息
+                    //wt.OnModifyContact += new WxTaskCore.ModifyContact(wt_OnModifyContact);
+                    ////通知发送信息
+                    //wt.OnNotifySend += new WxTaskCore.NotifySend(wt_OnNotifySend);
+                    //////每一个微信号，开启一个线程
+                    ////ThreadStart start = new ThreadStart(wt.ReviceMsg);
+                    ////new Thread(start).Start();
+                    ////启动发送线程
+                    //new Thread(new ThreadStart(wt.AutoSendMsg)).Start();
+                    //#endregion
                 }
 
             })).BeginInvoke(null, null);

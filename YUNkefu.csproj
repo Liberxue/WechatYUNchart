@@ -255,7 +255,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="app.config" />
     <None Include="Libs\webbrowsers\WebKitBrowser.dll.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -291,6 +290,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Libs\Newtonsoft.Json.dll" />
+    <None Include="Resources\红包.png" />
+    <None Include="Resources\机器人.png" />
+    <None Include="Resources\视频.png" />
+    <None Include="Resources\图片.png" />
+    <None Include="Resources\语音.png" />
+    <None Include="Resources\人1.png" />
+    <None Include="Resources\男女.png" />
+    <None Include="Resources\聊天1.png" />
+    <None Include="Resources\群.png" />
+    <None Include="Resources\群 .png" />
+    <None Include="Resources\聊天.png" />
+    <None Include="Resources\人.png" />
     <None Include="Resources\main_light_bkg_top123.png" />
     <None Include="Resources\info2.png" />
     <None Include="Resources\back3.png" />
