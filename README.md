@@ -15,7 +15,8 @@
 - 机器人回复 ，定时回复，超时回复
  
 - 聊天记录保存，聊天记录查看
-
+ 
+git.oschina ： http://git.oschina.net/bolanzw/WechatYUNchart
 
  
 ![](http://ot1cc1u9t.bkt.clouddn.com/17-7-13/99226513.jpg)
