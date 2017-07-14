@@ -19,6 +19,15 @@
 git.oschina ： http://git.oschina.net/bolanzw/WechatYUNchart
 
  
+ ### 该项目已停止更新维护不提供Issues 
+ 
+ 协议分析：
+ 
+ 原理：
+ 
+ http://www.liberxue.com/wechart/wechart
+ 
+ 
 ![](http://ot1cc1u9t.bkt.clouddn.com/17-7-13/99226513.jpg)
 
 
