@@ -20,13 +20,12 @@
 git.oschina ： http://git.oschina.net/bolanzw/WechatYUNchart
 
  
- ## 该项目已停止更新维护不提供Issues 
  
- 协议分析：
+## 即时通讯交流：https://gitter.im/wechatliberxue/Lobby#
  
- 原理：
+## Issues提交：https://github.com/Liberxue/WechatYUNchart/issues 
  
- http://www.liberxue.com/wechart/wechart
+## 协议分析：http://www.liberxue.com/%E5%BE%AE%E4%BF%A1/wechart.html
  
  
 ![](http://ot1cc1u9t.bkt.clouddn.com/17-7-13/99226513.jpg)
